@@ -5,6 +5,7 @@ import { ArrowLeftOutlined, SettingOutlined,UserOutlined,
     FileTextOutlined,
     CalendarOutlined,ClockCircleOutlined,PlusSquareOutlined,NodeExpandOutlined,FieldTimeOutlined,ExclamationCircleOutlined } from '@ant-design/icons';
 import "antd/dist/antd.css";
+import Map from "../Maps"
 import { useState, useEffect } from "react";
 function SideNav(){
     
@@ -63,12 +64,12 @@ return(
             <Content
             className="site-layout-background"
             style={{
-                padding: 24,
-                margin: 0,
+                // padding: 24,
+                // margin: 0,
                 background:"#E5E5E5"
             }}
             >
-            Content
+            <Map></Map>
             </Content>
         </Layout>
         
