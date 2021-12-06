@@ -7,6 +7,8 @@ const data = [
     worker: "worker",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"06:30PM",
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const data = [
     worker: "visitor",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:00AM",
+    timeout:"06:00PM",
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ const data = [
     worker: "worker",
     inducted: "yes",
     prestart: "yes",
+    timein: "08:30AM",
+    timeout:"06:30PM",
   },
   {
     id: 4,
@@ -34,6 +40,8 @@ const data = [
     worker: "visitor",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"05:30PM",
   },
   {
     id: 5,
@@ -43,6 +51,8 @@ const data = [
     worker: "worker",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"05:30PM",
   },
   {
     id: 6,
@@ -52,6 +62,8 @@ const data = [
     worker: "visitor",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"05:30PM",
   },
   {
     id: 7,
@@ -61,6 +73,8 @@ const data = [
     worker: "worker",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"05:30PM",
   },
   {
     id: 8,
@@ -70,6 +84,8 @@ const data = [
     worker: "visitor",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"05:30PM",
   },
   {
     id: 9,
@@ -79,6 +95,8 @@ const data = [
     worker: "worker",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"05:30PM",
   },
   {
     id: 10,
@@ -88,6 +106,8 @@ const data = [
     worker: "visitor",
     inducted: "yes",
     prestart: "yes",
+    timein: "09:30AM",
+    timeout:"05:30PM",
   },
 ];
 
