@@ -1,0 +1,16 @@
+//base scss(normalized css)
+@import './Modules/sass/base';
+
+//varaiables
+@import './Modules/sass/variables';
+
+//general(flex,transition)
+@import './Modules/sass/general';
+
+//meadiQueries
+@import './Modules/sass/mediaQueries';
+
+//animation
+@import './Modules/sass/animation';
+
+@import './Modules/sass/buttons';

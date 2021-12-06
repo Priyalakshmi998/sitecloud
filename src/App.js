@@ -1,18 +1,29 @@
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from "react";
+import FullComponent from "./Modules/SideMenu/Menu";
+import { Provider } from "react-redux";
+import ForgotPassWord from "./Modules/Auth/ForgotPassWord/ForgotPassWord";
+import Login from "./Modules/Auth/Login/Login";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import store from "./Store/Store";
+import "antd/dist/antd.css";
 import './App.css';
-import Navbar from "./containers/Navbar";
-import SideNav from "./containers/SideNav";
-import PublicRoute from "./containers/Routes/PublicRoute";//Use this for routing for upcomming components
 
-function App() {
+
+const App = () => {
+
   return (
-
-
-    <main>
-      <Navbar/>
-      <SideNav/>
-    </main>
-    
+    <React.Fragment>
+      <Provider store={store}>
+        <Router>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot_password" element={<ForgotPassWord />} />
+            <Route path="/managesite" element={<FullComponent />} />
+          </Routes>
+        </Router>
+      </Provider>
+    </React.Fragment>
   );
 }
 
