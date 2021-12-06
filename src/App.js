@@ -17,6 +17,7 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <Routes>
+          <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forgot_password" element={<ForgotPassWord />} />
             <Route path="/managesite" element={<FullComponent />} />

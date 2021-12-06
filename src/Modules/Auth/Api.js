@@ -32,4 +32,4 @@ axiosinstance.interceptors.request.use(function (config) {
     return Promise.reject(error);
 });
 
-export default axiosinstance
+export default axiosinstance;

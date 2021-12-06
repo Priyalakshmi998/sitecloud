@@ -10,7 +10,7 @@ import {
 } from '@ant-design/icons';
 import "antd/dist/antd.css";
 import ManageSite from "../Maps/ManageSite";
-
+import Live from "../Attendence/Live";
 
 function SideNav() {
 
@@ -46,9 +46,14 @@ function SideNav() {
                         <Menu.Item key="2" icon={<SettingOutlined />} title="Manage Site" >
                             Manage Site
                         </Menu.Item>
-                        <Menu.Item key="3" icon={<UserOutlined />} title="Attendnce">
-                            Attendnce
-                        </Menu.Item>
+                       
+                        <SubMenu key="3" icon={<UserOutlined />} title="Attendnce">
+                            <Menu.Item icon={<ClockCircleOutlined />} key="12">Live Attendence</Menu.Item>
+                            <Menu.Item key="13" icon={<NodeExpandOutlined />}>Daily Attendence</Menu.Item>
+                            <Menu.Item key="14" icon={<FieldTimeOutlined />}>Attendence History</Menu.Item>
+                            <Menu.Item key="15" icon={<FieldTimeOutlined />}>Manual Sign-In</Menu.Item>
+                         
+                        </SubMenu>
                         <Menu.Item key="4" icon={<UnorderedListOutlined />} title="Inductions">
                             Inductions
                         </Menu.Item>
@@ -81,8 +86,8 @@ function SideNav() {
                             background: "#E5E5E5"
                         }}
                     >
-                        <ManageSite />
-
+                        <Live></Live>
+                      
                     </Content>
                 </Layout>
 
