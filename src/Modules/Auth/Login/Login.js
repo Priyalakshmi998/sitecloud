@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col, Input, Button } from "antd";
 import { useNavigate } from 'react-router';
 import useStateWithValidation from "../../Utils/useStateWithValidation";
-import Logo from "../../../assets/Logo.png";
+import Logo from "../../../assets/image/png/Logo.png";
 import { login } from "../../../Actions/Auth"
 import { connect } from "react-redux";
 import "./Login.css";
@@ -71,7 +71,7 @@ const Login = ({ login, isAuthenticated }) => {
                     <section className="formInput_container">
                         <div className="login_page">
                             <div className="logo_img">
-
+                                {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
                             <h1>Site Management System</h1>

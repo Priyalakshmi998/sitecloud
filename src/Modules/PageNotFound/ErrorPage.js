@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const ErrorPage = () => {
     return (
         <React.Fragment>
@@ -9,4 +10,4 @@ const ErrorPage = () => {
     )
 }
 
-export default ErrorPage
+export default ErrorPage;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Row, Col, Input, Button } from "antd";
 import useStateWithValidation from "../../Utils/useStateWithValidation";
-import Logo from "../../../assets/Logo.png";
+import Logo from "../../../assets/image/png/Logo.png";
 import "../Login/Login.css";
 
 const ForgotPassWord = () => {
@@ -16,18 +16,13 @@ const ForgotPassWord = () => {
 
     const [checkValidation, setCheckValidation] = useState(false);
 
-
-
     const onChangeEmailInput = (e) => {
         setUserEmailInput(e.target.value);
     };
 
-
-
     const handleForgotPassWord = async (event) => {
         event.preventDefault();
         setCheckValidation(true);
-
 
         try {
 
@@ -54,12 +49,12 @@ const ForgotPassWord = () => {
                     </div>
                 </Col>
                 {/* img container ends */}
-                {/* Login container starts */}
+                {/* Forgot password container starts */}
                 <Col xs={{ span: 24 }} md={{ span: 14 }} lg={{ span: 14 }}>
                     <section className="formInput_container">
                         <div className="login_page">
                             <div className="logo_img">
-
+                                {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
                             <h1>Site Management System</h1>
@@ -86,26 +81,23 @@ const ForgotPassWord = () => {
 
 
                                     <div className="forgot_password">
-
                                         <Button type="link" onClick={() => { navigate("/login") }}>
                                             Back to Login
                                         </Button>
                                     </div>
-                                    <div className="login_btn">
 
+                                    <div className="login_btn">
+                                        {/* Login btn  */}
                                         <button type="submit" >
                                             Login
                                         </button>
                                     </div>
-
-
                                 </form>
-
                             </div>
                         </div>
                     </section>
                 </Col>
-                {/* Login container ends */}
+                {/*  Forgot password container ends */}
             </Row>
         </React.Fragment>
     )

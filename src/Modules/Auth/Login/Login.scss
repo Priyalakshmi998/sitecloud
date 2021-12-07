@@ -6,6 +6,7 @@
     @extend %flex_center;
 }
 
+
 .login_page {
     width: 100%;
 
@@ -96,17 +97,23 @@
     font-size: 16px;
 }
 
+// .login_pg_img {
+//     height: 100vh;
+// }
+
 .login_pg_img {
-    background-color: turquoise;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-image: url("../../../assets/image/svg/login_bg.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 //tablet
 //767px
 @include m_md {
     .login_pg_img {
-        display: block;
+        display: none;
     }
 }
 
