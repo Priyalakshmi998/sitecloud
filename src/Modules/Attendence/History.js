@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-class Daily extends Component {
+
+class History extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,17 +30,18 @@ class Daily extends Component {
           <p className="font-bold">
             Address: 12 Aughtie Dr, Park VIC 3206, Australia
           </p>
+         
         </div>
       </section>
       <div  className="flex pr-5  text-gray-700">
-                  <div className="w-3/12 "></div>
-                  <div className=" pl-10 w-3/12">Company Name</div>
-                  <div className="  w-1/12 ">Worker/Visitor</div>
-                  <div className=" text-center w-2/12">Inducted</div>
+                  <div className="w-2/12 text-center">Name</div>
+                  <div className="pl-5  w-3/12">Company Name</div>
+                  <div className="  w-2/12 ">Worker/Visitor</div>
+                  <div className="  w-1/12">Inducted</div>
                   <div className="   w-1/12">Daily Prestart</div>
                   <div className=" w-1/12 ">Time-In</div>
-                  <div className=" w-1/12 pr-10">Time-Out</div>
-                  
+                  <div className=" w-1/12 ">Time-Out</div>
+                  <div className=" w-1/12 ">Hours On Site</div>
                 </div>
                 <section className="p-3">
         <div className="bg-white  text-black  p-5 shadow-2xl  ">
@@ -49,14 +51,14 @@ class Daily extends Component {
             return (
               <>
                
-                <div key={item.id} className="flex pt-4 pb-2 pl-6">
-                  <div className="w-3/12 ">
+                <div key={item.id} className="flex pt-4 pb-2 ">
+                  <div className="w-2/12 ">
                     <div className="flex">
                       <div className="w-1/6">
                         <img
                           src={item.image}
                           alt="Image"
-                          className="rounded-full h-10 w-10 -mt-1"
+                          className="rounded-full h-8 w-8 -mt-1"
                         />
                       </div>
                       <div className="pl-3 w-5/6 font-bold text-blue-600 capitalize">
@@ -65,12 +67,12 @@ class Daily extends Component {
                     </div>
                   </div>
                   <div className="capitalize font-bold w-3/12 ">{item.company} </div>
-                  <div className="capitalize w-1/12 ">{item.worker}</div>
-                  <div className=" text-center w-2/12">🟢</div>
-                  <div className="  pl-2 w-1/12">🔴</div>
+                  <div className="capitalize w-2/12 ">{item.worker}</div>
+                  <div className="  w-1/12 pl-2">🟢</div>
+                  <div className=" w-1/12 pl-5">🔴</div>
                   <div className=" w-1/12 ">{item.timein}</div>
                   <div className=" w-1/12 pl-2">{item.timeout}</div>
-                  
+                  <div className="w-1/12 pl-7">08.56</div>
                 </div>
                 <hr></hr>
               </>
@@ -83,4 +85,4 @@ class Daily extends Component {
   }
 }
 
-export default Daily;
+export default History;

@@ -12,6 +12,7 @@ import "antd/dist/antd.css";
 import ManageSite from "../Maps/ManageSite";
 import Live from "../Attendence/Live";
 import Daily from "../Attendence/Daily";
+import History from "../Attendence/History";
 
 function SideNav() {
 
@@ -89,7 +90,7 @@ function SideNav() {
                     >
                         <Live></Live>
                         <Daily></Daily>
-                      
+                        <History></History>
                     </Content>
                 </Layout>
 
