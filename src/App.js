@@ -17,7 +17,7 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <Routes>
-            <Route path="/" element={<Login />} />
+          <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forgot_password" element={<ForgotPassWord />} />
             <Route element={<ProtectedRoutes />}>
