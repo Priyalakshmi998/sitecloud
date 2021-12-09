@@ -341,7 +341,7 @@ template {
   display: none;
 }
 
-.formInput_container {
+.formInput_container, .user_setting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,6 +355,10 @@ template {
 
 .float_left {
   float: left;
+}
+
+.mb_0 {
+  margin-bottom: 0;
 }
 
 /** Validation error msg animation **/
@@ -389,9 +393,107 @@ template {
   }
 }
 
+.sidebar_menu .ant-layout-sider-light,
+.sidebar_menu .ant-layout-sider-light .ant-layout-sider-trigger {
+  border-right: 5px solid #e5e5e5 !important;
+}
+
+.sidebar_menu .ant-menu-item-selected {
+  color: #fff;
+}
+
+.sidebar_menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #1875f0;
+}
+
+.sidebar_menu .ant-menu-inline .ant-menu-selected::after,
+.sidebar_menu .ant-menu-inline .ant-menu-item-selected::after {
+  -webkit-transform: none;
+          transform: none;
+}
+
+/*Desktop View*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+}
+
+.logo-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  z-index: 2;
+  -webkit-box-shadow: 0px 5px #E5E5E5;
+          box-shadow: 0px 5px #E5E5E5;
+}
+
+.logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo-nav .logo {
+  width: 50px;
+  height: 50px;
+  margin: 18px 5px 0px 20px;
+}
+
+.logo-nav .logo-container #title-text {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 30px;
+  color: #1875F0;
+}
+
 .formInput_container {
   width: 100%;
   height: 100vh;
+}
+
+.user_setting {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #a3c9f7;
+  margin-left: 10px;
+  color: #1875F0;
+}
+
+.header_logo {
+  width: 55px;
+  height: 55px;
+  margin: 5px 5px 5px 0px;
+}
+
+.nav_bar .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  font-weight: 600;
+  color: #000;
+}
+
+.nav_bar .css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  background-color: #fff;
+  border-bottom: 5px solid #e5e5e5;
+}
+
+.nav_bar .css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  color: #1875F0;
+}
+
+.nav_bar .css-1f8a19r-MuiTypography-root {
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
 .login_page {
@@ -399,17 +501,15 @@ template {
 }
 
 .login_page .logo_img {
+  margin: auto;
   text-align: center;
-}
-
-.login_page .logo_img img {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
 }
 
 .login_page h1 {
   text-align: center;
-  color: #1875F0;
+  color: #000;
   font-size: 40px;
   margin: 0px 0px;
 }
@@ -426,7 +526,7 @@ template {
 }
 
 .login_form form {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -484,9 +584,7 @@ template {
 .login_pg_img {
   width: 100%;
   height: 100vh;
-  background-image: url("../../../assets/image/svg/login_bg.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url("../../assets/image/svg/login_bg.svg");
 }
 
 @media only screen and (max-width: 767px) {
@@ -512,4 +610,4 @@ template {
     display: block;
   }
 }
-/*# sourceMappingURL=Login.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router"
 import { Layout, Menu } from 'antd';
 import {
     ArrowLeftOutlined, SettingOutlined, UserOutlined,
     UnorderedListOutlined,
-    FileTextOutlined,
+    FileTextOutlined, LoginOutlined,
     CalendarOutlined, ClockCircleOutlined, PlusSquareOutlined, NodeExpandOutlined, FieldTimeOutlined, ExclamationCircleOutlined
 } from '@ant-design/icons';
+import { useMedia } from "react-use";
+import "../sass/style.css"
 import "antd/dist/antd.css";
-import ManageSite from "../Maps/ManageSite";
-import Live from "../Attendence/Live";
-import Daily from "../Attendence/Daily";
-import History from "../Attendence/History";
+
 
 function SideNav() {
     let navigate = useNavigate();
+
 
     const { SubMenu } = Menu;
     const { Header, Content, Sider } = Layout;
@@ -23,22 +23,35 @@ function SideNav() {
         setCollapsed(collapsed);
     };
 
+    const deviceWidth = useMedia("(min-width: 1024px)");
+
+    useEffect(() => {
+        if (deviceWidth == true) {
+            //default sidebar open
+            setCollapsed(false);
+        } else {
+            //<1024px close sidebar
+            setCollapsed(true);
+        }
+    }, [deviceWidth]);
+
     return (
         <>
-            <Sider width={280}
-                collapsible
-                collapsed={collapsed}
-                onCollapse={onCollapse}
-                theme="light"
-                className="site-layout-background sidebar_border"
-                style={{ minHeight: "100vh" }}
-            >
-                <Menu
-                    mode="inline"
-                    defaultSelectedKeys={['2']}
-                    // defaultOpenKeys={['sub1']}
-                    style={{ height: '100%', borderRight: 0 }}
-                />
+            <span className="sidebar_menu" style={{ minHeight: "100vh", height: '100%' }}>
+                <Sider width={280}
+                    collapsible
+                    collapsed={collapsed}
+                    onCollapse={onCollapse}
+                    theme="light"
+                    className="site-layout-background"
+                    style={{ minHeight: "100vh", height: '100%' }}
+                >
+                    <Menu
+                        mode="inline"
+                        defaultSelectedKeys={['2']}
+                        // defaultOpenKeys={['sub1']}
+                        style={{ height: '100%', borderRight: 0 }}
+                    />
                     <Menu
                         mode="inline"
                         defaultSelectedKeys={['2']}
@@ -48,16 +61,17 @@ function SideNav() {
                         <Menu.Item key="1" icon={<ArrowLeftOutlined />} title="Site 1">
                             Site 1
                         </Menu.Item>
-                        <Menu.Item key="2" icon={<SettingOutlined />} title="Manage Site" >
+                        <Menu.Item key="2" icon={<SettingOutlined />} title="Manage Site" onClick={() => navigate("/managesite")}>
                             Manage Site
                         </Menu.Item>
-                       
+
                         <SubMenu key="3" icon={<UserOutlined />} title="Attendnce">
-                            <Menu.Item icon={<ClockCircleOutlined />} key="12">Live Attendence</Menu.Item>
-                            <Menu.Item key="13" icon={<NodeExpandOutlined />}>Daily Attendence</Menu.Item>
-                            <Menu.Item key="14" icon={<FieldTimeOutlined />}>Attendence History</Menu.Item>
-                            <Menu.Item key="15" icon={<FieldTimeOutlined />}>Manual Sign-In</Menu.Item>
-                         
+                            <Menu.Item key="12" icon={<ClockCircleOutlined />} onClick={() => navigate("/live_attendence")}
+                            >Live Attendence</Menu.Item>
+                            <Menu.Item key="13" icon={<CalendarOutlined />} onClick={() => navigate("/daily_attendence")}>Daily Attendence</Menu.Item>
+                            <Menu.Item key="14" icon={<FieldTimeOutlined />} onClick={() => navigate("/attendence_history")} >Attendence History</Menu.Item>
+                            <Menu.Item key="15" icon={<LoginOutlined />}>Manual Sign-In</Menu.Item>
+
                         </SubMenu>
                         <Menu.Item key="4" icon={<UnorderedListOutlined />} title="Inductions">
                             Inductions
@@ -81,21 +95,8 @@ function SideNav() {
                         </Menu.Item>
                     </Menu>
                 </Sider>
+            </span>
 
-                <Layout >
-                    <Content
-                        className="site-layout-background"
-                        style={{
-                            // padding: 24,
-                            // margin: 0,
-                            background: "#E5E5E5"
-                        }}
-                    >
-                        <Live></Live>
-                        <Daily></Daily>
-                        <History></History>
-                    </Content>
-                </Layout>
         </>
     );
 }

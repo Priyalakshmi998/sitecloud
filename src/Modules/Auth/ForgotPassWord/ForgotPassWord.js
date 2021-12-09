@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { Row, Col, Input, Button } from "antd";
 import useStateWithValidation from "../../Utils/useStateWithValidation";
 import Logo from "../../../assets/image/png/Logo.png";
-import "../Login/Login.css";
+import "../../sass/style.css";
 
 const ForgotPassWord = () => {
 
@@ -43,21 +43,21 @@ const ForgotPassWord = () => {
         <React.Fragment>
             <Row>
                 {/* img container starts */}
-                <Col xs={{ span: 24 }} md={{ span: 10 }} lg={{ span: 10 }}>
+                <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
                     <div className="login_pg_img">
 
                     </div>
                 </Col>
                 {/* img container ends */}
                 {/* Forgot password container starts */}
-                <Col xs={{ span: 24 }} md={{ span: 14 }} lg={{ span: 14 }}>
+                <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
                     <section className="formInput_container">
                         <div className="login_page">
                             <div className="logo_img">
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
-                            <h1>Site Management System</h1>
+                            <h1>Site Cloud</h1>
                             <div className="login_form">
                                 <h2>Forgot Password</h2>
                                 <form onSubmit={handleForgotPassWord}>

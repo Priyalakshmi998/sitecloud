@@ -1,5 +1,8 @@
 import React from "react";
 import Map from "./Modules/Maps/ManageSite";
+import Live from "./Modules/Attendence/Live";
+import DailyAttenance from "./Modules/Attendence/Daily";
+import History from "./Modules/Attendence/History";
 import { Provider } from "react-redux";
 import ForgotPassWord from "./Modules/Auth/ForgotPassWord/ForgotPassWord";
 import Login from "./Modules/Auth/Login/Login";
@@ -17,11 +20,20 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <Routes>
-          <Route path="/" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forgot_password" element={<ForgotPassWord />} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/managesite" element={<Map />} />
+            </Route>
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/daily_attendence" element={<DailyAttenance />} />
+            </Route>
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/live_attendence" element={<Live />} />
+            </Route>
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/attendence_history" element={<History />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
           </Routes>

@@ -5,7 +5,7 @@ import useStateWithValidation from "../../Utils/useStateWithValidation";
 import Logo from "../../../assets/image/png/Logo.png";
 import { login } from "../../../Actions/Auth"
 import { connect } from "react-redux";
-import "./Login.css";
+import "../../sass/style.css";
 
 const Login = ({ login, isAuthenticated }) => {
     let navigate = useNavigate();
@@ -34,6 +34,8 @@ const Login = ({ login, isAuthenticated }) => {
     };
 
 
+
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setCheckValidation(true);
@@ -47,9 +49,9 @@ const Login = ({ login, isAuthenticated }) => {
             });
             console.log("login", login.state);
 
-            //   if (credentials) {
-            //     history.push("/home");
-            //   }
+            if (credentials) {
+                navigate("/managesite");
+            }
         } catch (error) {
             console.log("error", error);
         }
@@ -60,21 +62,21 @@ const Login = ({ login, isAuthenticated }) => {
         <React.Fragment>
             <Row>
                 {/* img container starts */}
-                <Col xs={{ span: 24 }} md={{ span: 10 }} lg={{ span: 10 }}>
+                <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
                     <div className="login_pg_img">
 
                     </div>
                 </Col>
                 {/* img container ends */}
                 {/* Login container starts */}
-                <Col xs={{ span: 24 }} md={{ span: 14 }} lg={{ span: 14 }}>
+                <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
                     <section className="formInput_container">
                         <div className="login_page">
                             <div className="logo_img">
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
-                            <h1>Site Management System</h1>
+                            <h1>Site Cloud</h1>
                             <div className="login_form">
                                 <h2>Login</h2>
                                 <form onSubmit={handleSubmit}>

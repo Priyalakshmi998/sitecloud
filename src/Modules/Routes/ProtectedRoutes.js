@@ -13,7 +13,7 @@ const ProtectedRoutes = () => {
         <>
             {/* Header */}
             <Navbar />
-            <span className="float_left">
+            <span className="float_left" >
                 {/* side menu */}
                 <SideNav />
             </span>

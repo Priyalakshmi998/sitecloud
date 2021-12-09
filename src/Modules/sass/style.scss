@@ -1,0 +1,252 @@
+//base scss(normalized css)
+@import './base';
+
+//varaiables
+@import './variables';
+
+//general(flex,transition)
+@import './general';
+
+//meadiQueries
+@import './mediaQueries';
+
+//animation
+@import './animation';
+
+@import './buttons';
+
+
+
+.sidebar_menu .ant-layout-sider-light,
+.sidebar_menu .ant-layout-sider-light .ant-layout-sider-trigger {
+    border-right: 5px solid #e5e5e5 !important;
+}
+
+.sidebar_menu .ant-menu-item-selected {
+    color: #fff;
+}
+
+.sidebar_menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #1875f0;
+}
+
+.sidebar_menu .ant-menu-inline .ant-menu-selected::after,
+.sidebar_menu .ant-menu-inline .ant-menu-item-selected::after {
+    transform: none;
+}
+
+
+/*Desktop View*/
+.header {
+    display: flex;
+    background: #ffff;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0px 5px $light-grey;
+}
+
+.logo-container {
+    display: flex;
+
+}
+
+.logo-nav {
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin: 18px 5px 0px 20px;
+    }
+
+    .logo-container {
+        #title-text {
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 550;
+            font-size: 30px;
+            color: $primary-color;
+        }
+    }
+}
+
+
+.formInput_container {
+    width: 100%;
+    height: 100vh;
+    @extend %flex_center;
+}
+
+.user_setting {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @extend %flex_center;
+    background-color: #a3c9f7;
+    margin-left: 10px;
+    color: $primary-color;
+}
+
+.header_logo {
+    width: 55px;
+    height: 55px;
+    margin: 5px 5px 5px 0px;
+}
+
+.nav_bar .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    font-weight: 600;
+    color: #000;
+}
+
+.nav_bar .css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    background-color: #fff;
+    border-bottom: 5px solid #e5e5e5;
+}
+
+.nav_bar .css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    color: $primary-color;
+}
+
+.nav_bar .css-1f8a19r-MuiTypography-root {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+
+.login_page {
+    width: 100%;
+
+    .logo_img {
+        margin: auto;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #000;
+        font-size: 40px;
+        margin: 0px 0px;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+.login_form {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0px;
+
+
+
+    form {
+        width: 100%;
+        margin: auto;
+
+
+        .ant-input {
+            margin-top: 6px !important;
+        }
+
+        .forgot_password {
+            .ant-btn-link {
+                color: $primary-color;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            .ant-btn {
+                padding: 4px 0px;
+                font-weight: 600;
+                font-size: 16px;
+
+            }
+        }
+    }
+}
+
+.validation_error {
+    color: map-get($colors, "red-danger");
+}
+
+.login_btn {
+    text-align: center;
+
+    button {
+        padding: 8px 20px;
+        border: 0;
+        font-size: 22px;
+        font-weight: 600;
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: map-get($colors, "white");
+        cursor: pointer;
+        margin-top: 30px;
+
+        &:hover {
+            background-color: map-get($colors, "blue");
+        }
+    }
+}
+
+.input_container {
+    margin-bottom: 15px;
+}
+
+.form_label {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+// .login_pg_img {
+//     height: 100vh;
+// }
+
+.login_pg_img {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/image/svg/login_bg.svg");
+
+}
+
+//tablet
+//767px
+@include m_md {
+    .login_pg_img {
+        display: none;
+    }
+}
+
+//600px
+@include x_md {
+    .login_pg_img {
+        display: none;
+    }
+}
+
+
+//320px
+@include xs {
+    .login_pg_img {
+        display: none;
+    }
+}
+
+//Tab
+//768px
+@include md {
+    .login_pg_img {
+        display: block;
+    }
+}
