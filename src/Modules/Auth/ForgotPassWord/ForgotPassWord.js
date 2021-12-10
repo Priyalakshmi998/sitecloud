@@ -64,7 +64,7 @@ const ForgotPassWord = () => {
                                     {/* Email field starts */}
                                     <div className="input_container">
 
-                                        <label className="form_label login_text">Enter your email address</label>
+                                        <label className="form_label">Enter your email address</label>
                                         <Input
                                             placeholder="Danielrich@gmail.com"
                                             name="userEmailInput"
@@ -89,7 +89,7 @@ const ForgotPassWord = () => {
                                     <div className="login_btn">
                                         {/* Login btn  */}
                                         <button type="submit" >
-                                        Send Password Reset Link
+                                            Login
                                         </button>
                                     </div>
                                 </form>
