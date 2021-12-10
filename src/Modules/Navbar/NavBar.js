@@ -1,29 +1,3 @@
-// import Logo from "../../assets/image/png/Logo.png";
-// // import "./Navbar.css";
-// import Button from '@mui/material/Button';
-
-// const Navbar = () => {
-
-//     return (
-//         <header className="header">
-//             <div className="logo-nav">
-//                 <div className="logo-container">
-//                     {/* Logo img */}
-//                     <img className="logo" src={Logo} alt="Logo" />
-
-//                     <h1 id="title-text">Site Cloud</h1>
-
-//                     <div className="content_end">
-//                         Account Setting
-//                     </div>
-//                     <Button variant="text">Text</Button>
-//                 </div>
-//             </div>
-//         </header>
-//     );
-// };
-
-// export default Navbar;
 import React, { useState } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -31,13 +5,9 @@ import Menu from '@mui/material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Avatar from '@mui/material/Avatar';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from "../../assets/image/png/Logo.png";
 import { UserOutlined } from '@ant-design/icons';
-// import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];

@@ -40,18 +40,16 @@ const Login = ({ login, isAuthenticated }) => {
         event.preventDefault();
         setCheckValidation(true);
 
-
         try {
-
-            let credentials = login({
+            let credentials = await login({
                 email: userEmailInput,
                 password: userpasswordInput,
             });
             console.log("login", login.state);
 
-            if (credentials) {
-                navigate("/managesite");
-            }
+            // if (credentials) {
+            //     navigate("/managesite");
+            // }
         } catch (error) {
             console.log("error", error);
         }
@@ -118,21 +116,17 @@ const Login = ({ login, isAuthenticated }) => {
                                     {/* Password field ends */}
 
                                     <div className="forgot_password">
-
                                         <Button type="link" onClick={() => { navigate("/forgot_password") }}>
                                             Forgot Password?
                                         </Button>
                                     </div>
-                                    <div className="login_btn">
 
-                                        <button type="submit" >
+                                    <div className="login_btn">
+                                        <button type="submit" onClick={() => { navigate("/managesite") }} >
                                             Login
                                         </button>
                                     </div>
-
-
                                 </form>
-
                             </div>
                         </div>
                     </section>

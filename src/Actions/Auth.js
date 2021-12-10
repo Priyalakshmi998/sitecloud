@@ -13,7 +13,7 @@ export const login = ({ email, password }) => async (
     const body = JSON.stringify({ email, password });
     try {
 
-        const res = await Axiosinstance.post("/api", body);
+        const res = await Axiosinstance.post("/", body);
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data,
