@@ -81,12 +81,14 @@ const Login = ({ login, isAuthenticated }) => {
                                     {/* Email field starts */}
                                     <div className="input_container">
 
-                                        <label className="form_label">Email Address</label>
+                                        <label className="form_label login_text">Email Address</label>
                                         <Input
                                             placeholder="Danielrich@gmail.com"
                                             name="userEmailInput"
+                                            
                                             value={userEmailInput}
-                                            onChange={onChangeEmailInput} />
+                                            onChange={onChangeEmailInput} 
+                                            />
                                         {/* email validation */}
                                         {checkValidation === true && validEmail === false && (
                                             <>
@@ -98,7 +100,7 @@ const Login = ({ login, isAuthenticated }) => {
 
                                     {/* Password field starts */}
                                     <div className="input_container">
-                                        <label className="form_label">Password</label>
+                                        <label className="form_label login_text">Password</label>
                                         <Input.Password
                                             placeholder="* * * * * *"
                                             name="userpasswordInput"
