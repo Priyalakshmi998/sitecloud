@@ -57,7 +57,7 @@ const ForgotPassWord = () => {
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
-                            <h1>Site Cloud</h1>
+                            <h1 className="pt-6">Site Cloud</h1>
                             <div className="login_form">
                                 <h2>Forgot Password</h2>
                                 <form onSubmit={handleForgotPassWord}>
@@ -65,11 +65,12 @@ const ForgotPassWord = () => {
                                     <div className="input_container">
 
                                         <label className="form_label login_text">Enter your email address</label>
+                                        <div className="pt-1">
                                         <Input
-                                            placeholder="Danielrich@gmail.com"
+                                            placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
                                             name="userEmailInput"
                                             value={userEmailInput}
-                                            onChange={onChangeEmailInput} />
+                                            onChange={onChangeEmailInput} /></div>
                                         {/* email validation */}
                                         {checkValidation === true && validEmail === false && (
                                             <>

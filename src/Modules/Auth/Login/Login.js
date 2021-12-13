@@ -74,7 +74,7 @@ const Login = ({ login, isAuthenticated }) => {
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
-                            <h1>Site Cloud</h1>
+                            <h1 className="pt-6">Site Cloud</h1>
                             <div className="login_form">
                                 <h2>Login</h2>
                                 <form onSubmit={handleSubmit}>
@@ -82,13 +82,14 @@ const Login = ({ login, isAuthenticated }) => {
                                     <div className="input_container">
 
                                         <label className="form_label login_text">Email Address</label>
+                                        <div className="pt-1">
                                         <Input
-                                            placeholder="Danielrich@gmail.com"
+                                            placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
                                             name="userEmailInput"
                                             
                                             value={userEmailInput}
                                             onChange={onChangeEmailInput} 
-                                            />
+                                            /></div>
                                         {/* email validation */}
                                         {checkValidation === true && validEmail === false && (
                                             <>
@@ -101,12 +102,13 @@ const Login = ({ login, isAuthenticated }) => {
                                     {/* Password field starts */}
                                     <div className="input_container">
                                         <label className="form_label login_text">Password</label>
+                                        <div className="pt-2">
                                         <Input.Password
-                                            placeholder="* * * * * *"
+                                            placeholder="&nbsp;&nbsp;&nbsp;* * * * * *"
                                             name="userpasswordInput"
                                             value={userpasswordInput}
                                             onChange={onChangePasswordInput}
-                                        />
+                                        /></div>
                                         {/* password validation */}
                                         {checkValidation === true && validPassword === false && (
                                             <>
@@ -124,7 +126,7 @@ const Login = ({ login, isAuthenticated }) => {
                                     </div>
 
                                     <div className="login_btn">
-                                        <button type="submit" onClick={() => { navigate("/managesite") }} >
+                                        <button type="submit" onClick={() => { navigate("/home") }} >
                                             Login
                                         </button>
                                     </div>

@@ -22,7 +22,7 @@ class  Live extends Component {
     return (
       <>
          <section className="p-3">
-        <div className="bg-white  text-black  p-5 shadow-xl">
+        <div className="bg-white  text-black  p-5 shadow-xl ">
           <p className="font-bold text-2xl">
             Site Attendence: Melbourne F1 Track
           </p>
@@ -33,8 +33,8 @@ class  Live extends Component {
       </section>
       <div  className="flex pr-5  text-gray-700">
                   <div className="w-3/12 "></div>
-                  <div className=" pl-10 w-3/12">Company Name</div>
-                  <div className=" w-1/12 ">Worker/Visitor</div>
+                  <div className="pl-3 w-3/12">Company Name</div>
+                  <div className="w-1/12 ">Worker/Visitor</div>
                   <div className="text-center  w-3/12 ">Inducted</div>
                   <div className="text-center  w-2/12">Daily Prestart</div>
                   

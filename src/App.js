@@ -3,6 +3,8 @@ import Map from "./Modules/Maps/ManageSite";
 import Live from "./Modules/Attendence/Live";
 import DailyAttenance from "./Modules/Attendence/Daily";
 import History from "./Modules/Attendence/History";
+import Signin from "./Modules/Attendence/Signin";
+import Home from "./Modules/Homepage/Home";
 import { Provider } from "react-redux";
 import ForgotPassWord from "./Modules/Auth/ForgotPassWord/ForgotPassWord";
 import Login from "./Modules/Auth/Login/Login";
@@ -12,6 +14,7 @@ import PageNotFound from "./Modules/PageNotFound/ErrorPage"
 import store from "./Store/Store";
 import "antd/dist/antd.css";
 import './App.css';
+import Sitesetup from "./Modules/Homepage/Sitesetup";
 
 const App = () => {
 
@@ -23,6 +26,8 @@ const App = () => {
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forgot_password" element={<ForgotPassWord />} />
+            <Route path="/home" element={<Home/>} />
+            <Route path="/site_setup" element={<Sitesetup/>} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/managesite" element={<Map />} />
             </Route>
@@ -34,6 +39,9 @@ const App = () => {
             </Route>
             <Route element={<ProtectedRoutes />}>
               <Route path="/attendence_history" element={<History />} />
+            </Route>
+             <Route element={<ProtectedRoutes />}>
+              <Route path="/manual_signin" element={<Signin />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
           </Routes>

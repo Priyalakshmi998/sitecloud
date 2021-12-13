@@ -51,7 +51,7 @@ class History extends Component {
             return (
               <>
                
-                <div key={item.id} className="flex pt-4 pb-2 ">
+                <div key={item.id} className="flex pt-4 pb-2 lg:pl-9">
                   <div className="w-2/12 ">
                     <div className="flex">
                       <div className="w-1/6">
