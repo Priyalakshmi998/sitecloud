@@ -57,26 +57,27 @@ const ForgotPassWord = () => {
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
-                            <h1>Site Cloud</h1>
+                            <h1 className="pt-6">Site Cloud</h1>
                             <div className="login_form">
-                                <h2>Forgot Password</h2>
                                 <form onSubmit={handleForgotPassWord}>
+                                    <h2>Forgot Password</h2>
                                     {/* Email field starts */}
                                     <div className="input_container">
 
                                         <label className="form_label">Enter your email address</label>
                                         <Input
-                                            placeholder="Danielrich@gmail.com"
+                                            placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
                                             name="userEmailInput"
                                             value={userEmailInput}
                                             onChange={onChangeEmailInput} />
-                                        {/* email validation */}
-                                        {checkValidation === true && validEmail === false && (
-                                            <>
-                                                <span className="validation_error text-focus-in">*Email is required</span>
-                                            </>
-                                        )}
                                     </div>
+                                    {/* email validation */}
+                                    {checkValidation === true && validEmail === false && (
+                                        <>
+                                            <span className="validation_error text-focus-in">*Email is required</span>
+                                        </>
+                                    )}
+
                                     {/* Email field ends */}
 
 
@@ -88,7 +89,7 @@ const ForgotPassWord = () => {
 
                                     <div className="login_btn">
                                         {/* Login btn  */}
-                                        <button type="submit" >
+                                        <button type="submit" onClick={() => { navigate("/managesite") }}>
                                             Login
                                         </button>
                                     </div>
@@ -98,8 +99,8 @@ const ForgotPassWord = () => {
                     </section>
                 </Col>
                 {/*  Forgot password container ends */}
-            </Row>
-        </React.Fragment>
+            </Row >
+        </React.Fragment >
     )
 }
 

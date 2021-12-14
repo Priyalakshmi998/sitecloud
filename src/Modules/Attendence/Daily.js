@@ -34,7 +34,7 @@ const Daily = () => {
       </section>
       <div className="flex pr-5  text-gray-700">
         <div className="w-3/12 "></div>
-        <div className=" pl-10 w-3/12">Company Name</div>
+        <div className=" pl-3 w-3/12">Company Name</div>
         <div className="  w-1/12 ">Worker/Visitor</div>
         <div className=" text-center w-2/12">Inducted</div>
         <div className="   w-1/12">Daily Prestart</div>
@@ -42,6 +42,8 @@ const Daily = () => {
         <div className=" w-1/12 pr-10">Time-Out</div>
 
       </div>
+
+
       <section className="p-3">
         <div className="bg-white  text-black  p-5 shadow-2xl  ">
           {dailyAttendenceData.map((e, i) => {
