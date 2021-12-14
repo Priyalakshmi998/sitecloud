@@ -57,19 +57,21 @@ const ForgotPassWord = () => {
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
-                            <h1 className="pt-6">Site Cloud</h1>
-                            <div className="login_form">
-                                <h2>Forgot Password</h2>
+                            <h1 className="pt-6 pb-9">Site Cloud</h1>
+                            
+                             <div className="login_form ">
+                            <h3 className="forget_page_head">Forget Password</h3>
                                 <form onSubmit={handleForgotPassWord}>
                                     {/* Email field starts */}
                                     <div className="input_container">
 
-                                        <label className="form_label login_text">Enter your email address</label>
+                                        <label className="form_label ">Enter your email address</label>
                                         <div className="pt-1">
                                         <Input
                                             placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
                                             name="userEmailInput"
                                             value={userEmailInput}
+                                            className="login_input_text"
                                             onChange={onChangeEmailInput} /></div>
                                         {/* email validation */}
                                         {checkValidation === true && validEmail === false && (
@@ -87,7 +89,7 @@ const ForgotPassWord = () => {
                                         </Button>
                                     </div>
 
-                                    <div className="login_btn">
+                                    <div className="resend_btn">
                                         {/* Login btn  */}
                                         <button type="submit" >
                                         Send Password Reset Link

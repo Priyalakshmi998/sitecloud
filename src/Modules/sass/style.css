@@ -395,7 +395,7 @@ template {
 
 .sidebar_menu .ant-layout-sider-light,
 .sidebar_menu .ant-layout-sider-light .ant-layout-sider-trigger {
-  border-right: 5px solid #e5e5e5 !important;
+  border-right: 5px solid red !important;
 }
 
 .sidebar_menu .ant-menu-item-selected {
@@ -503,26 +503,53 @@ template {
 .login_page .logo_img {
   margin: auto;
   text-align: center;
-  width: 60px;
-  height: 60px;
+  width: 79.09px;
+  height: 75px;
+  left: 1040px;
+  top: 121px;
 }
 
 .login_page h1 {
+  margin: auto;
   text-align: center;
-  color: #000;
-  font-size: 40px;
-  margin: 0px 0px;
+  /* Site Management System */
+  width: 291px;
+  height: 29px;
+  left: 934px;
+  top: 243px;
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  /* identical to box height */
+  letter-spacing: 0.065em;
+  /* primary text */
+  color: #33323D;
 }
 
 .login_page h2 {
-  font-size: 25px;
-  font-weight: 700;
+  /* Login */
+  width: 51px;
+  height: 24px;
+  left: 785px;
+  top: 323px;
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height */
+  letter-spacing: 0.065em;
+  /* primary text */
+  color: #33323D;
 }
 
 .login_form {
   width: 90%;
   margin: auto;
   padding: 30px 0px;
+  font-family: Riviera Nights Trial;
 }
 
 .login_form form {
@@ -557,15 +584,18 @@ template {
 }
 
 .login_btn button {
-  padding: 8px 20px;
   border: 0;
-  font-size: 22px;
+  font-size: 13px;
   font-weight: 600;
   background-color: #1875F0;
   border-color: #1875F0;
   color: #fff;
   cursor: pointer;
   margin-top: 30px;
+  width: 146px;
+  height: 45px;
+  left: 1007px;
+  top: 680px;
 }
 
 .login_btn button:hover {
@@ -577,8 +607,20 @@ template {
 }
 
 .form_label {
-  font-weight: 600;
-  font-size: 16px;
+  /* Email Address */
+  width: 93px;
+  height: 17px;
+  left: 785px;
+  top: 388px;
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height */
+  letter-spacing: 0.065em;
+  /* secondary text */
+  color: #7A7A7A;
 }
 
 .login_pg_img {
@@ -586,15 +628,107 @@ template {
   height: 100vh;
   background-image: url("../../assets/image/svg/login_bg.svg");
 }
-.login_text{
-  color: #7A7A7A;
-  
+
+.login_btn_txt {
+  width: 37px;
+  height: 17px;
+  left: 1062px;
+  top: 694px;
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height */
+  letter-spacing: 0.065em;
+  color: #FFFFFF;
+}
+
+.login_input_text {
+  padding: 7px;
+}
+
+.login_button_text {
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 6px;
+  line-height: 17px;
+  /* identical to box height */
+  letter-spacing: 0.065em;
+  color: #FFFFFF;
+}
+
+.resend_btn {
+  text-align: center;
+}
+
+.resend_btn button {
+  /* primary color */
+  background: #1875F0;
+  border: 0;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #1875F0;
+  border-color: #1875F0;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 258px;
+  height: 45px;
+  left: 951px;
+  top: 558px;
+}
+
+.resend_btn button:hover {
+  background-color: #1919e6;
+}
+
+.forget_page {
+  width: 156px;
+  height: 24px;
+  left: 785px;
+  top: 323px;
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height */
+  letter-spacing: 0.065em;
+  /* primary text */
+  color: #33323D;
+}
+
+.forget_page_head {
+  width: 156px;
+  height: 24px;
+  left: 785px;
+  top: 323px;
+  padding-bottom: 32px;
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  /* identical to box height */
+  letter-spacing: 0.065em;
+  /* primary text */
+  color: #33323D;
 }
 
 @media only screen and (max-width: 767px) {
   .login_pg_img {
     display: none;
   }
+}
+
+.ant-input-prefix {
+  display: none;
+}
+
+.ant-input-suffix {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {

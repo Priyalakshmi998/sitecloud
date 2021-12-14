@@ -74,19 +74,20 @@ const Login = ({ login, isAuthenticated }) => {
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
-                            <h1 className="pt-6">Site Cloud</h1>
+                            <div className="pt-6" >
+                            <h1 >Site Cloud</h1></div>
                             <div className="login_form">
                                 <h2>Login</h2>
                                 <form onSubmit={handleSubmit}>
                                     {/* Email field starts */}
                                     <div className="input_container">
 
-                                        <label className="form_label login_text">Email Address</label>
+                                        <label className="form_label ">Email Address</label>
                                         <div className="pt-1">
                                         <Input
                                             placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
                                             name="userEmailInput"
-                                            
+                                            className="login_input_text"
                                             value={userEmailInput}
                                             onChange={onChangeEmailInput} 
                                             /></div>
@@ -101,7 +102,7 @@ const Login = ({ login, isAuthenticated }) => {
 
                                     {/* Password field starts */}
                                     <div className="input_container">
-                                        <label className="form_label login_text">Password</label>
+                                        <label className="form_label ">Password</label>
                                         <div className="pt-2">
                                         <Input.Password
                                             placeholder="&nbsp;&nbsp;&nbsp;* * * * * *"
@@ -120,13 +121,13 @@ const Login = ({ login, isAuthenticated }) => {
                                     {/* Password field ends */}
 
                                     <div className="forgot_password">
-                                        <Button type="link" onClick={() => { navigate("/forgot_password") }}>
+                                        <Button type="link" onClick={() => { navigate("/forgot_password") }} >
                                             Forgot Password?
                                         </Button>
                                     </div>
 
                                     <div className="login_btn">
-                                        <button type="submit" onClick={() => { navigate("/home") }} >
+                                        <button type="submit" onClick={() => { navigate("/home") }}  className="login_button_text" >
                                             Login
                                         </button>
                                     </div>
