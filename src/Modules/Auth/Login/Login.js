@@ -81,7 +81,7 @@ const Login = ({ login, isAuthenticated }) => {
                                 <form onSubmit={handleSubmit}>
                                     {/* Email field starts */}
                                     <div className="input_container">
-<<<<<<< HEAD
+
 
                                         <label className="form_label ">Email Address</label>
                                         <div className="pt-1">
@@ -92,17 +92,8 @@ const Login = ({ login, isAuthenticated }) => {
                                             value={userEmailInput}
                                             onChange={onChangeEmailInput} 
                                             /></div>
-=======
-                                        <label className="form_label login_text">Email Address</label>
-                                        <div className="pt-1">
-                                            <Input
-                                                placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
-                                                name="userEmailInput"
-                                                value={userEmailInput}
-                                                onChange={onChangeEmailInput} />
 
-                                        </div>
->>>>>>> 829b713c3b2acba4c13f713cced7b535a6e6b062
+
                                         {/* email validation */}
                                         {checkValidation === true && validEmail === false && (
                                             <>
@@ -115,12 +106,9 @@ const Login = ({ login, isAuthenticated }) => {
 
                                     {/* Password field starts */}
                                     <div className="input_container">
-<<<<<<< HEAD
+
                                         <label className="form_label ">Password</label>
-=======
-                                        <label className="form_label">Password</label>
-                                        <label className="form_label login_text">Password</label>
->>>>>>> 829b713c3b2acba4c13f713cced7b535a6e6b062
+
                                         <div className="pt-2">
                                             <Input.Password
                                                 placeholder="&nbsp;&nbsp;&nbsp;* * * * * *"
