@@ -57,20 +57,31 @@ const ForgotPassWord = () => {
                                 {/* Logo */}
                                 <img src={Logo} alt="logo" />
                             </div>
+<<<<<<< HEAD
                             <h1 className="pt-6 pb-9">Site Cloud</h1>
                             
                              <div className="login_form ">
                             <h3 className="forget_page_head">Forget Password</h3>
+=======
+                            <h1 className="pt-6">Site Cloud</h1>
+                            <div className="login_form">
+>>>>>>> 829b713c3b2acba4c13f713cced7b535a6e6b062
                                 <form onSubmit={handleForgotPassWord}>
+                                    <h2>Forgot Password</h2>
                                     {/* Email field starts */}
                                     <div className="input_container">
 
+<<<<<<< HEAD
                                         <label className="form_label ">Enter your email address</label>
                                         <div className="pt-1">
+=======
+                                        <label className="form_label">Enter your email address</label>
+>>>>>>> 829b713c3b2acba4c13f713cced7b535a6e6b062
                                         <Input
                                             placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
                                             name="userEmailInput"
                                             value={userEmailInput}
+<<<<<<< HEAD
                                             className="login_input_text"
                                             onChange={onChangeEmailInput} /></div>
                                         {/* email validation */}
@@ -79,7 +90,17 @@ const ForgotPassWord = () => {
                                                 <span className="validation_error text-focus-in">*Email is required</span>
                                             </>
                                         )}
+=======
+                                            onChange={onChangeEmailInput} />
+>>>>>>> 829b713c3b2acba4c13f713cced7b535a6e6b062
                                     </div>
+                                    {/* email validation */}
+                                    {checkValidation === true && validEmail === false && (
+                                        <>
+                                            <span className="validation_error text-focus-in">*Email is required</span>
+                                        </>
+                                    )}
+
                                     {/* Email field ends */}
 
 
@@ -91,8 +112,8 @@ const ForgotPassWord = () => {
 
                                     <div className="resend_btn">
                                         {/* Login btn  */}
-                                        <button type="submit" >
-                                        Send Password Reset Link
+                                        <button type="submit" onClick={() => { navigate("/managesite") }}>
+                                            Login
                                         </button>
                                     </div>
                                 </form>
@@ -101,8 +122,8 @@ const ForgotPassWord = () => {
                     </section>
                 </Col>
                 {/*  Forgot password container ends */}
-            </Row>
-        </React.Fragment>
+            </Row >
+        </React.Fragment >
     )
 }
 

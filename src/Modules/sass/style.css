@@ -628,6 +628,7 @@ template {
   height: 100vh;
   background-image: url("../../assets/image/svg/login_bg.svg");
 }
+<<<<<<< HEAD
 
 .login_btn_txt {
   width: 37px;
@@ -716,6 +717,8 @@ template {
   /* primary text */
   color: #33323D;
 }
+=======
+>>>>>>> 829b713c3b2acba4c13f713cced7b535a6e6b062
 
 @media only screen and (max-width: 767px) {
   .login_pg_img {

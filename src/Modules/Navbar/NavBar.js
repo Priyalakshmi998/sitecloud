@@ -41,32 +41,11 @@ const Navbar = () => {
                             Site Cloud
                         </Typography>
 
-                        <Button variant="text" onClick={handleOpenUserMenu}>Account Setting
+                        <Button variant="text" >Account Setting
                             <span className="user_setting"> <UserOutlined /></span>
                         </Button>
 
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
+
                     </Toolbar>
                     {/* <span className="user_setting">
 
