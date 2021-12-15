@@ -37,8 +37,8 @@ function SideNav() {
 
     return (
         <>
-            <span className="sidebar_menu" style={{ minHeight: "100vh", height: '100%' }}>
-                <Sider width={280}
+            <span className="sidebar_menu figma_font" style={{ minHeight: "100vh", height: '100%' }}>
+                <Sider width={330}
                     collapsible
                     collapsed={collapsed}
                     onCollapse={onCollapse}

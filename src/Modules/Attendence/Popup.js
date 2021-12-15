@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import "../sass/style.css";
 class Popup extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +22,8 @@ class Popup extends Component {
 
         return (
             <>
-
+            
+            <div className="figma_font">  
                 <section className="p-3 px-20">
                     <div className="bg-white  text-black  p-5 px-12 pb-10 shadow-2xl">
 
@@ -112,6 +113,7 @@ class Popup extends Component {
 
                     </div>
                 </section>
+                </div>
             </>
         );
     }

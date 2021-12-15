@@ -32,7 +32,7 @@ function Sitesetup() {
         <>
             <Navbar />
 
-            <Layout style={{ minHeight: "100vh" }}>
+            <Layout style={{ minHeight: "100vh" }} className="figma_font">
                 <Sider width={360}
                    
                     theme="light"

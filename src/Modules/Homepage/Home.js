@@ -11,6 +11,7 @@ import {
 import "antd/dist/antd.css";
 import ManageSite from "../Maps/ManageSite";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "../sass/style.css";
 
 function Home() {
     let navigate = useNavigate();
@@ -24,13 +25,13 @@ function Home() {
     // let navigate = useNavigate();
     return (
         <>
-            <Navbar />
+            <Navbar  />
 
-            <Layout style={{ minHeight: "100vh" }}>
+            <Layout style={{ minHeight: "100vh" }} className="figma_font">
                 <Sider width={320}
                    
                     theme="light"
-                    className="site-layout-background"
+                    className="site-layout-background "
                 >
                     <Menu
                         mode="inline"
@@ -47,6 +48,7 @@ function Home() {
                         <p className="px-6 py-4 border-b hover:bg-blue-600 hover:text-white">Site 4: Chemical Factory, Richmond</p>
                         <p className="px-6 py-4 border-b hover:bg-blue-600 hover:text-white">Site 5: Powerhouse, High Street</p>
                         <p className="px-6 py-4 border-b hover:bg-blue-600 hover:text-white">Site 6: Iron Core mining, Kingston city</p>
+                        
                         </div>
                     </Menu>
                 </Sider>

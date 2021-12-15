@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../sass/style.css";
 
 class Signin extends Component {
   constructor(props) {
@@ -22,15 +23,41 @@ class Signin extends Component {
 
     return (
       <>
-        <section className="p-3">
-          <div className="bg-white  text-black  p-5 shadow-2xl">
-            <p className="font-bold text-2xl">
+       <div className="figma_font">
+       <section className="p-3">
+          <div className="live_att_address ">
+            <h1>
               Site Attendence: Melbourne F1 Track
-            </p>
-            <p className="font-bold">
+            </h1>
+            <h2>
               Address: 12 Aughtie Dr, Park VIC 3206, Australia
-            </p>
+            </h2>
+            <div className="flex  pt-3">
+              <div className="pr-12" >
+                <p className="total_workers_no">214</p>
+                <p className="people_on_site">People on site</p>
+              </div>
+              <div className="pr-12">
+                <p className="total_workers_present">199</p>
+                <p className="workers">Workers</p>
+              </div>
+              <div>
+                <p className="total_workers_visitors">15</p>
+                <p className="visitors">Visitors</p>
+              </div>
+            </div>
+            <div className="flex">
+            <div><svg width="404" height="13" viewBox="0 0 404 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="404" height="13" rx="6.5" fill="#753AF4" />
+            </svg>
+            </div>
+            <div><svg width="61" height="13" viewBox="0 0 61 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6.5C0 2.91015 2.91015 0 6.5 0H54.5C58.0899 0 61 2.91015 61 6.5C61 10.0899 58.0899 13 54.5 13H6.5C2.91015 13 0 10.0899 0 6.5Z" fill="#EC4E86" />
+            </svg>
+            </div>
           </div>
+          </div>
+          
         </section>
         <section className="p-3">
           <div className="bg-white  text-black  p-5 shadow-2xl">
@@ -55,6 +82,7 @@ class Signin extends Component {
             </div>
           </div>
         </section>
+        </div>
       </>
     );
   }

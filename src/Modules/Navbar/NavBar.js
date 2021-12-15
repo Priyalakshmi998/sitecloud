@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from "../../assets/image/png/Logo.png";
 import { UserOutlined } from '@ant-design/icons';
+import "../sass/style.css"; 
 
 const Navbar = () => {
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -28,7 +29,7 @@ const Navbar = () => {
         setAnchorElUser(null);
     };
     return (
-        <header className="nav_bar">
+        <header className="nav_bar figma_font">
 
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
@@ -41,7 +42,7 @@ const Navbar = () => {
                             Site Cloud
                         </Typography>
 
-                        <Button variant="text" >Account Setting
+                        <Button variant="text " >Account Setting
                             <span className="user_setting"> <UserOutlined /></span>
                         </Button>
 
