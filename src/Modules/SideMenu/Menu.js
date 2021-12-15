@@ -58,7 +58,7 @@ function SideNav() {
                         // defaultOpenKeys={['sub1']}
                         style={{ height: '100%', borderRight: 0 }}
                     >
-                        <Menu.Item key="1" icon={<ArrowLeftOutlined />} title="Site 1">
+                        <Menu.Item key="1" icon={<ArrowLeftOutlined />} title="Site 1"  onClick={() => navigate("/home")}>
                             Site 1
                         </Menu.Item>
                         <Menu.Item key="2" icon={<SettingOutlined />} title="Manage Site" onClick={() => navigate("/managesite")}>

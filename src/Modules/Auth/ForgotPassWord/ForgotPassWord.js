@@ -107,7 +107,7 @@ const ForgotPassWord = () => {
                                     <div className="resend_btn">
                                         {/* Login btn  */}
                                         <button type="submit" onClick={() => { navigate("/managesite") }}>
-                                            Login
+                                            Send Password Reset Link
                                         </button>
                                     </div>
                                 </form>
