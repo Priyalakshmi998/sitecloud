@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PageNotFound from "./Modules/PageNotFound/ErrorPage"
 import store from "./Store/Store";
 import "antd/dist/antd.css";
+import "./Modules/sass/style.css";
 import './App.css';
 import Sitesetup from "./Modules/Homepage/Sitesetup";
 import Editbasic from "./Modules/Attendence/Editbasic";
@@ -20,7 +21,7 @@ import Editbasic from "./Modules/Attendence/Editbasic";
 const App = () => {
 
   return (
-    <React.Fragment>
+ <React.Fragment>
       <Provider store={store}>
         <Router>
           <Routes>
@@ -52,6 +53,9 @@ const App = () => {
         </Router>
       </Provider>
     </React.Fragment>
+
+    
+
   );
 }
 

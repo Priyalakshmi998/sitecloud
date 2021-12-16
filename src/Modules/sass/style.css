@@ -393,9 +393,8 @@ template {
   }
 }
 
-.sidebar_menu .ant-layout-sider-light,
-.sidebar_menu .ant-layout-sider-light .ant-layout-sider-trigger {
-  border-right: 5px solid red !important;
+.full_components .ant-layout {
+  background: #ffff !important;
 }
 
 .sidebar_menu .ant-menu-item-selected {

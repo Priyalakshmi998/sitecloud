@@ -12,29 +12,40 @@ const ForgotPassWord = () => {
         userEmailInput,
         setUserEmailInput,
         validEmail,
-    ] = useStateWithValidation((email) => email.length > 3, "");
+    ] = useStateWithValidation((email) => email.length > 0, "");
 
     const [checkValidation, setCheckValidation] = useState(false);
+    const [checkEmailVaidation, setCheckEmailVaildation] = useState(false);
 
     const onChangeEmailInput = (e) => {
         setUserEmailInput(e.target.value);
+        setCheckEmailVaildation(false);
     };
 
     const handleForgotPassWord = async (event) => {
         event.preventDefault();
         setCheckValidation(true);
+        setCheckEmailVaildation(false);
+        if (validEmail.toString() == "true") {
+            try {
+                const checkEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        try {
+                if (checkEmail.test(String(userEmailInput).toLowerCase()) === false) {
+                    setCheckEmailVaildation(true);
+                }
+                else {
 
-            let getUserMailID = {
-                email: userEmailInput,
+                    let getUserMailID = {
+                        email: userEmailInput,
+                    }
+                    console.log("getUserMailID", getUserMailID);
 
+                    navigate("/home");
+                }
+
+            } catch (error) {
+                console.log("error", error);
             }
-            console.log("getUserMailID", getUserMailID);
-
-
-        } catch (error) {
-            console.log("error", error);
         }
     };
 
@@ -58,12 +69,12 @@ const ForgotPassWord = () => {
                                 <img src={Logo} alt="logo" />
                             </div>
                             <h1 className="pt-6 pb-9">Site Cloud</h1>
-                            
-                             <div className="login_form ">
-                            <h3 className="forget_page_head">Forget Password</h3>
+
+                            <div className="login_form ">
+                                <h3 className="forget_page_head">Forget Password</h3>
 
                                 <form onSubmit={handleForgotPassWord}>
-                                  
+
                                     {/* Email field starts */}
                                     <div className="input_container">
 
@@ -71,29 +82,32 @@ const ForgotPassWord = () => {
                                         <label className="form_label ">Enter your email address</label>
                                         <div className="pt-1">
 
-                                        <Input
-                                            placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
-                                            name="userEmailInput"
-                                            value={userEmailInput}
+                                            <Input
+                                                placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
+                                                name="userEmailInput"
+                                                value={userEmailInput}
 
-                                            className="login_input_text"
-                                            onChange={onChangeEmailInput} /></div>
+                                                className="login_input_text"
+                                                onChange={onChangeEmailInput} /></div>
                                         {/* email validation */}
                                         {checkValidation === true && validEmail === false && (
                                             <>
-                                                <span className="validation_error text-focus-in">*Email is required</span>
+                                                <div className="validation_error text-focus-in">*Email is required</div>
                                             </>
                                         )}
 
-                                           
+                                        {/* Correct mail ID validation */}
+                                        {
+                                            checkEmailVaidation && (
+                                                <>
+                                                    <div className="validation_error text-focus-in">*Email is not valid</div>
+                                                </>
+                                            )
+                                        }
 
                                     </div>
                                     {/* email validation */}
-                                    {checkValidation === true && validEmail === false && (
-                                        <>
-                                            <span className="validation_error text-focus-in">*Email is required</span>
-                                        </>
-                                    )}
+
 
                                     {/* Email field ends */}
 
@@ -106,7 +120,7 @@ const ForgotPassWord = () => {
 
                                     <div className="resend_btn">
                                         {/* Login btn  */}
-                                        <button type="submit" onClick={() => { navigate("/managesite") }}>
+                                        <button type="submit" >
                                             Send Password Reset Link
                                         </button>
                                     </div>
