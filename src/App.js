@@ -15,6 +15,7 @@ import store from "./Store/Store";
 import "antd/dist/antd.css";
 import './App.css';
 import Sitesetup from "./Modules/Homepage/Sitesetup";
+import Editbasic from "./Modules/Attendence/Editbasic";
 
 const App = () => {
 
@@ -42,6 +43,9 @@ const App = () => {
             </Route>
              <Route element={<ProtectedRoutes />}>
               <Route path="/manual_signin" element={<Signin />} />
+            </Route>
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/edit_basic_information" element={<Editbasic />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
           </Routes>
