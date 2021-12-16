@@ -44,7 +44,7 @@ function SideNav() {
                     onCollapse={onCollapse}
                     theme="light"
                     className="site-layout-background"
-                    style={{ minHeight: "100vh", height: '100%' }}
+                    style={{ minHeight: "100vh", height: '100%', backgroundColor: "#fff" }}
                 >
                     <Menu
                         mode="inline"
@@ -58,7 +58,7 @@ function SideNav() {
                         // defaultOpenKeys={['sub1']}
                         style={{ height: '100%', borderRight: 0 }}
                     >
-                        <Menu.Item key="1" icon={<ArrowLeftOutlined />} title="Site 1"  onClick={() => navigate("/home")}>
+                        <Menu.Item key="1" icon={<ArrowLeftOutlined />} title="Site 1" onClick={() => navigate("/home")}>
                             Site 1
                         </Menu.Item>
                         <Menu.Item key="2" icon={<SettingOutlined />} title="Manage Site" onClick={() => navigate("/managesite")}>
@@ -70,7 +70,7 @@ function SideNav() {
                             >Live Attendence</Menu.Item>
                             <Menu.Item key="13" icon={<CalendarOutlined />} onClick={() => navigate("/daily_attendence")}>Daily Attendence</Menu.Item>
                             <Menu.Item key="14" icon={<FieldTimeOutlined />} onClick={() => navigate("/attendence_history")} >Attendence History</Menu.Item>
-                            <Menu.Item key="15" icon={<LoginOutlined />}  onClick={() => navigate("/manual_signin")} >Manual Sign-In</Menu.Item>
+                            <Menu.Item key="15" icon={<LoginOutlined />} onClick={() => navigate("/manual_signin")} >Manual Sign-In</Menu.Item>
 
                         </SubMenu>
                         <Menu.Item key="4" icon={<UnorderedListOutlined />} title="Inductions">

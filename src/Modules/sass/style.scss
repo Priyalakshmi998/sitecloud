@@ -16,10 +16,8 @@
 @import './buttons';
 
 
-
-.sidebar_menu .ant-layout-sider-light,
-.sidebar_menu .ant-layout-sider-light .ant-layout-sider-trigger {
-    border-right: 5px solid red !important;
+.full_components .ant-layout {
+    background: #ffff !important;
 }
 
 .sidebar_menu .ant-menu-item-selected {
@@ -34,7 +32,6 @@
 .sidebar_menu .ant-menu-inline .ant-menu-item-selected::after {
     transform: none;
 }
-
 
 /*Desktop View*/
 .header {
@@ -128,7 +125,7 @@
         height: 75px;
         left: 1040px;
         top: 121px;
- 
+
 
     }
 
@@ -143,16 +140,16 @@
         left: 934px;
         top: 243px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 22px;
-line-height: 29px;
-/* identical to box height */
-letter-spacing: 0.065em;
+        font-family: Riviera Nights Trial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 29px;
+        /* identical to box height */
+        letter-spacing: 0.065em;
 
-/* primary text */
-color: #33323D;
+        /* primary text */
+        color: #33323D;
 
 
     }
@@ -161,21 +158,21 @@ color: #33323D;
         /* Login */
 
 
-width: 51px;
-height: 24px;
-left: 785px;
-top: 323px;
+        width: 51px;
+        height: 24px;
+        left: 785px;
+        top: 323px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height */
-letter-spacing: 0.065em;
+        font-family: Riviera Nights Trial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        /* identical to box height */
+        letter-spacing: 0.065em;
 
-/* primary text */
-color: #33323D;
+        /* primary text */
+        color: #33323D;
 
 
     }
@@ -224,7 +221,7 @@ color: #33323D;
     text-align: center;
 
     button {
-       
+
         border: 0;
         font-size: 13px;
         font-weight: 600;
@@ -237,6 +234,7 @@ color: #33323D;
         height: 45px;
         left: 1007px;
         top: 680px;
+
         &:hover {
             background-color: map-get($colors, "blue");
         }
@@ -248,24 +246,24 @@ color: #33323D;
 }
 
 .form_label {
-   /* Email Address */
+    /* Email Address */
 
 
-width: 93px;
-height: 17px;
-left: 785px;
-top: 388px;
+    width: 93px;
+    height: 17px;
+    left: 785px;
+    top: 388px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
-letter-spacing: 0.065em;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+    letter-spacing: 0.065em;
 
-/* secondary text */
-color: #7A7A7A;
+    /* secondary text */
+    color: #7A7A7A;
 
 
 }
@@ -280,47 +278,50 @@ color: #7A7A7A;
     background-image: url("../../assets/image/svg/login_bg.svg");
 
 }
-.login_btn_txt{
+
+.login_btn_txt {
     width: 37px;
-height: 17px;
-left: 1062px;
-top: 694px;
+    height: 17px;
+    left: 1062px;
+    top: 694px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
-.login_input_text{
+
+.login_input_text {
     padding: 7px;
 }
-.login_button_text{
-    
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 6px;
-line-height: 17px;
-/* identical to box height */
 
-letter-spacing: 0.065em;
+.login_button_text {
 
-color: #FFFFFF;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    color: #FFFFFF;
 }
 
 .resend_btn {
     text-align: center;
 
     button {
-       
+
         /* primary color */
-        
+
         background: #1875F0;
         border: 0;
         font-size: 13px;
@@ -334,50 +335,53 @@ color: #FFFFFF;
         height: 45px;
         left: 951px;
         top: 558px;
-        
+
         &:hover {
             background-color: map-get($colors, "blue");
         }
     }
 }
-.forget_page{
+
+.forget_page {
     width: 156px;
-height: 24px;
-left: 785px;
-top: 323px;
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height */
+    height: 24px;
+    left: 785px;
+    top: 323px;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary text */
+    /* primary text */
 
-color: #33323D;
+    color: #33323D;
 }
-.forget_page_head{
+
+.forget_page_head {
     width: 156px;
-height: 24px;
-left: 785px;
-top: 323px;
-padding-bottom: 32px;
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 19px;
-line-height: 24px;
-/* identical to box height */
+    height: 24px;
+    left: 785px;
+    top: 323px;
+    padding-bottom: 32px;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary text */
+    /* primary text */
 
-color: #33323D;
+    color: #33323D;
 }
-.figma_font{
+
+.figma_font {
     font-family: Riviera Nights Trial;
 }
 
@@ -388,11 +392,15 @@ color: #33323D;
         display: none;
     }
 }
-.ant-input-prefix{
-    display: none;
-} .ant-input-suffix{
+
+.ant-input-prefix {
     display: none;
 }
+
+.ant-input-suffix {
+    display: none;
+}
+
 //600px
 @include x_md {
     .login_pg_img {
@@ -415,355 +423,377 @@ color: #33323D;
         display: block;
     }
 }
-.live_att_address{
+
+.live_att_address {
     width: 1156px;
     height: 193px;
     left: 272px;
     top: 84px;
     background: #FFFFFF;
-   
+
     padding: 20px;
 }
-.live_att_address h1{
+
+.live_att_address h1 {
     width: 422px;
-height: 29px;
-left: 294px;
-top: 105px;
+    height: 29px;
+    left: 294px;
+    top: 105px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 22px;
-line-height: 29px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary text */
+    /* primary text */
 
-color: #33323D;
+    color: #33323D;
 }
-.live_att_address h2{
+
+.live_att_address h2 {
     width: 389px;
-height: 17px;
-left: 295px;
-top: 139px;
+    height: 17px;
+    left: 295px;
+    top: 139px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary text */
+    /* primary text */
 
-color: #33323D;
+    color: #33323D;
 }
-.total_workers_no{
+
+.total_workers_no {
     width: 34px;
-height: 24px;
-left: 294px;
-top: 180px;
+    height: 24px;
+    left: 294px;
+    top: 180px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-color: #33323D;
+    color: #33323D;
 }
-.total_workers_present{
+
+.total_workers_present {
     width: 34px;
-height: 24px;
-left: 422px;
-top: 180px;
+    height: 24px;
+    left: 422px;
+    top: 180px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* bar one */
+    /* bar one */
 
-color: #753AF4;
+    color: #753AF4;
 }
-.total_workers_visitors{
+
+.total_workers_visitors {
     width: 22px;
-height: 24px;
-left: 510px;
-top: 180px;
+    height: 24px;
+    left: 510px;
+    top: 180px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* bar two */
+    /* bar two */
 
-color: #EC4E86;
+    color: #EC4E86;
 }
-.people_on_site{
+
+.people_on_site {
     width: 87px;
-height: 16px;
-left: 294px;
-top: 209px;
+    height: 16px;
+    left: 294px;
+    top: 209px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* secondary text */
+    /* secondary text */
 
-color: #7A7A7A;
+    color: #7A7A7A;
 }
-.workers{
+
+.workers {
     width: 50px;
-height: 16px;
-left: 422px;
-top: 209px;
+    height: 16px;
+    left: 422px;
+    top: 209px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* bar one */
+    /* bar one */
 
-color: #753AF4;
+    color: #753AF4;
 
 }
-.visitors{
+
+.visitors {
     width: 47px;
-height: 16px;
-left: 510px;
-top: 209px;
+    height: 16px;
+    left: 510px;
+    top: 209px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* bar two */
+    /* bar two */
 
-color: #EC4E86;
+    color: #EC4E86;
 }
-.live_att_thead{
-  
+
+.live_att_thead {
+
     width: 1156px;
     height: 46px;
     left: 272px;
     top: 277px;
-    
+
     background: #FAFAFA;
-   
+
 }
-.thead_cmpy_name{
+
+.thead_cmpy_name {
     position: absolute;
     width: 120px;
     height: 16px;
     left: 583px;
     top: 292px;
-    
+
     font-family: Riviera Nights Trial;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     /* identical to box height */
-    
+
     letter-spacing: 0.065em;
-    
+
     /* secondary text */
-    
+
     color: #7A7A7A;
-    
+
 
 }
-.thead_workers{
+
+.thead_workers {
     position: absolute;
     width: 93px;
-height: 16px;
-left: 891px;
-top: 292px;
+    height: 16px;
+    left: 891px;
+    top: 292px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* secondary text */
+    /* secondary text */
 
-color: #7A7A7A;
+    color: #7A7A7A;
 
 }
-.thead_inducted{
+
+.thead_inducted {
     position: absolute;
-width: 55px;
-height: 16px;
-left: 1039px;
-top: 292px;
+    width: 55px;
+    height: 16px;
+    left: 1039px;
+    top: 292px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* secondary text */
+    /* secondary text */
 
-color: #7A7A7A;
+    color: #7A7A7A;
 }
-.thead_present{
+
+.thead_present {
     position: absolute;
-width: 86px;
-height: 16px;
-left: 1204px;
-top: 292px;
+    width: 86px;
+    height: 16px;
+    left: 1204px;
+    top: 292px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* secondary text */
+    /* secondary text */
 
-color: #7A7A7A;
+    color: #7A7A7A;
 
 }
-.live_att_trow{
-   
+
+.live_att_trow {
+
     width: 1156px;
     height: 65px;
     left: 272px;
     top: 323px;
-    
+
     background: #FFFFFF;
 }
-.trow_image{
-    
-   
+
+.trow_image {
+
+
     width: 40px;
     height: 40px;
     left: 300px;
     top: 336px;
     border-radius: 27.5px;
 }
-.trow_name{
-  
-width: 81px;
-height: 16px;
-left: 367px;
-top: 348px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: 900;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+.trow_name {
 
-letter-spacing: 0.065em;
+    width: 81px;
+    height: 16px;
+    left: 367px;
+    top: 348px;
 
-/* primary color */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-color: #1875F0;
+    letter-spacing: 0.065em;
+
+    /* primary color */
+
+    color: #1875F0;
 
 
 }
-.trow_cmy_name{
-    
-width: 107px;
-height: 16px;
-left: 583px;
-top: 348px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: 900;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+.trow_cmy_name {
 
-letter-spacing: 0.065em;
+    width: 107px;
+    height: 16px;
+    left: 583px;
+    top: 348px;
 
-/* primary text */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-color: #33323D;
+    letter-spacing: 0.065em;
+
+    /* primary text */
+
+    color: #33323D;
 }
-.trow_worker{
+
+.trow_worker {
     width: 44px;
-height: 16px;
-left: 891px;
-top: 348px;
+    height: 16px;
+    left: 891px;
+    top: 348px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 16px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary text */
+    /* primary text */
 
-color: #33323D;
+    color: #33323D;
 }
-.trow_inducted{
+
+.trow_inducted {
     width: 11px;
-height: 11px;
-left: 1064px;
-top: 350px;
+    height: 11px;
+    left: 1064px;
+    top: 350px;
 
 }
-.trow_present{
+
+.trow_present {
     width: 11px;
-height: 11px;
-left: 1223px;
-top: 350px;
+    height: 11px;
+    left: 1223px;
+    top: 350px;
 
 }
-.txt_center{
+
+.txt_center {
     text-align: center;
     align-items: center;
-   
+
 }

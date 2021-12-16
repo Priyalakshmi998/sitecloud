@@ -7,11 +7,16 @@ import "../../sass/style.css";
 
 const Login = () => {
     let navigate = useNavigate();
+    // const [
+    //     userEmailInput,
+    //     setUserEmailInput,
+    //     validEmail,
+    // ] = useStateWithValidation((email) => email.length > 5, "");
+
     const [
         userEmailInput,
         setUserEmailInput,
-        validEmail,
-    ] = useStateWithValidation((email) => email.length > 5, "");
+    ] = useState("");
 
     const [checkValidation, setCheckValidation] = useState(false);
 
@@ -74,8 +79,7 @@ const Login = () => {
                     console.log("login", credentials);
                     console.log("email check", checkEmail.test(String(userEmailInput).toLowerCase()));
                     console.log("password", validPassword.toString());
-
-                    if (validEmail.toString() == "true" && validPassword.toString() == "true") {
+                    if (validPassword.toString() == "true") {
                         navigate("/home");
                     }
                 }
@@ -129,12 +133,7 @@ const Login = () => {
                                                 </>
                                             )
                                         }
-                                        {/* email validation */}
-                                        {checkValidation === true && validEmail === false && (
-                                            <>
-                                                <span className="validation_error text-focus-in">*Email ID is required</span>
-                                            </>
-                                        )}
+
                                         {/* Correct mail ID validation */}
                                         {
                                             checkEmailVaidation && (
