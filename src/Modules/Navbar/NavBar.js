@@ -9,11 +9,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Logo from "../../assets/image/png/Logo.png";
 import { UserOutlined } from '@ant-design/icons';
 import "../sass/style.css"; 
+import { useNavigate } from 'react-router';
 
 const Navbar = () => {
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    let navigate = useNavigate();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -33,16 +35,16 @@ const Navbar = () => {
 
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
-                    <Toolbar>
+                    <Toolbar className="cursor-pointer">
 
-                        <img className="header_logo" src={Logo} alt="Logo" />
+                        <img className="header_logo" src={Logo} alt="Logo"  onClick={() => { navigate("/home") }}/>
 
                         {/* </IconButton> */}
-                        <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+                        <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} onClick={() => { navigate("/home") }} >
                             Site Cloud
                         </Typography>
 
-                        <Button variant="text " >Account Setting
+                        <Button variant="text " onClick={() => { navigate("/settings") }}>Account Setting
                             <span className="user_setting"> <UserOutlined /></span>
                         </Button>
 

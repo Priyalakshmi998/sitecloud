@@ -25,7 +25,7 @@ class Signin extends Component {
       <>
        <div className="figma_font">
        <section className="p-3">
-          <div className="live_att_address ">
+          <div className="live_att_address  shadow-2xl ">
             <h1>
               Site Attendence: Melbourne F1 Track
             </h1>

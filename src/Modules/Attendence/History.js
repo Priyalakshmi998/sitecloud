@@ -24,7 +24,7 @@ const History = () => {
     <React.Fragment>
       <div className="figma_font">
         <section className="p-3">
-          <div className="live_att_address ">
+          <div className="live_att_address  shadow-2xl">
             <h1>
               Site Attendence: Melbourne F1 Track
             </h1>
@@ -58,15 +58,16 @@ const History = () => {
           </div>
 
         </section>
-        <div className="flex pr-5  text-gray-700">
+        {/* search bar place */}
+        <div className="flex pl-3 pr-5  text-gray-700 ">
           <div className="w-2/12 text-center">Name</div>
 
-          <div className="pl-5  w-3/12 text-center">Company Name</div>
+          <div className="  w-3/12 text-center">Company Name</div>
           <div className="  w-2/12 text-center ">Worker/Visitor</div>
-          <div className="  w-1/12 text-center">Inducted</div>
+          <div className="  w-1/12 pl-3">Inducted</div>
           <div className="   w-1/12 text-center">Daily Prestart</div>
-          <div className=" w-1/12 text-center">Time-In</div>
-          <div className=" w-1/12 text-center">Time-Out</div>
+          <div className=" w-1/12 pl-4">Time-In</div>
+          <div className=" w-1/12 pl-3 ">Time-Out</div>
           <div className=" w-1/12 text-center">Hours On Site</div>
         </div>
         <section className="p-3">
@@ -90,7 +91,7 @@ const History = () => {
                       </div>
                     </div>
                     <div className="capitalize font-bold w-3/12 pl-2">{e.company} </div>
-                    <div className="capitalize w-2/12 ">{e.worker}</div>
+                    <div className="capitalize w-2/12 pl-2">{e.worker}</div>
                     <div className="  w-1/12">
                       {
                         e.inducted_status == "active" ?
@@ -107,7 +108,7 @@ const History = () => {
                           </>
                       }
                     </div>
-                    <div className=" text-center  w-1/12">
+                    <div className="pl-3 text-center  w-1/12">
                       {
                         e.daily_prestart == "active" ?
                           <>
@@ -125,7 +126,7 @@ const History = () => {
                     </div>
                     <div className=" w-1/12 ">{e.timein}</div>
                     <div className=" w-1/12 pl-2">{e.timeout}</div>
-                    <div className="w-1/12 pl-7">{e.hrs_on_site}</div>
+                    <div className="w-1/12 pl-5">{e.hrs_on_site}</div>
                   </div>
                   <hr></hr>
                 </>

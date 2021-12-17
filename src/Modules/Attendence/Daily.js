@@ -24,8 +24,8 @@ const Daily = () => {
   return (
     <>
       <div className="figma_font">
-        <section className="p-3 w-full">
-          <div className="live_att_address ">
+        <section className="p-3 ">
+          <div className="live_att_address  shadow-2xl">
             <h1>
               Site Attendence: Melbourne F1 Track
             </h1>
@@ -59,14 +59,14 @@ const Daily = () => {
           </div>
 
         </section>
-        <div className="flex   text-gray-700">
+        <div className="flex   text-gray-700 px-3">
           <div className="w-3/12 "></div>
           <div className=" pl-8 w-3/12">Company Name</div>
-          <div className="  w-1/12 ">Worker/Visitor</div>
-          <div className=" text-center w-2/12">Inducted</div>
-          <div className="   w-1/12">Daily Prestart</div>
-          <div className=" w-1/12 ">Time-In</div>
-          <div className=" w-1/12 pr-2">Time-Out</div>
+          <div className=" w-2/12 pl-5">Worker/Visitor</div>
+          <div className=" w-1/12">Inducted</div>
+          <div className=" w-1/12">Daily Prestart</div>
+          <div className="w-1/12 pl-1">Time-In</div>
+          <div className="w-1/12 ">Time-Out</div>
 
         </div>
 
@@ -92,8 +92,8 @@ const Daily = () => {
                       </div>
                     </div>
                     <div className="capitalize font-bold w-3/12 text-left">{e.company} </div>
-                    <div className="capitalize w-2/12 ">{e.worker}</div>
-                    <div className="  w-1/12">
+                    <div className="capitalize w-2/12 pl-10">{e.worker}</div>
+                    <div className="  w-1/12 pl-5">
                       {
                         e.inducted_status == "active" ?
                           <>
@@ -111,7 +111,7 @@ const Daily = () => {
                           </>
                       }
                     </div>
-                    <div className=" text-right  w-1/12">
+                    <div className="   w-1/12 pl-8">
                       {
                         e.daily_prestart == "active" ?
                           <>
@@ -129,8 +129,8 @@ const Daily = () => {
                           </>
                       }
                     </div>
-                    <div className=" w-1/12 ">{e.timein}</div>
-                    <div className=" w-1/12 pl-2">{e.timeout}</div>
+                    <div className=" w-1/12 pl-3">{e.timein}</div>
+                    <div className=" w-1/12 pl-4">{e.timeout}</div>
 
                   </div>
                   <hr></hr>

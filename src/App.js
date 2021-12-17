@@ -5,6 +5,7 @@ import DailyAttenance from "./Modules/Attendence/Daily";
 import History from "./Modules/Attendence/History";
 import Signin from "./Modules/Attendence/Signin";
 import Home from "./Modules/Homepage/Home";
+import Settings from "./Modules/Homepage/Settings";
 import { Provider } from "react-redux";
 import ForgotPassWord from "./Modules/Auth/ForgotPassWord/ForgotPassWord";
 import Login from "./Modules/Auth/Login/Login";
@@ -47,6 +48,9 @@ const App = () => {
             </Route>
             <Route element={<ProtectedRoutes />}>
               <Route path="/edit_basic_information" element={<Editbasic />} />
+            </Route>
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/settings" element={<Settings />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
           </Routes>

@@ -24,7 +24,7 @@ const Live = () => {
     <React.Fragment>
        <div className="figma_font">
        <section className="p-3 w-full">
-          <div className="live_att_address ">
+          <div className="live_att_address  shadow-2xl">
             <h1>
               Site Attendence: Melbourne F1 Track
             </h1>
@@ -61,9 +61,9 @@ const Live = () => {
       <div className="flex pr-5  text-gray-700">
         <div className="w-3/12 "></div>
         <div className=" pl-10 w-3/12">Company Name</div>
-        <div className=" w-1/12 ">Worker/Visitor</div>
-        <div className="text-center  w-3/12 ">Inducted</div>
-        <div className="text-center  w-2/12">Daily Prestart</div>
+        <div className="pl-3 w-2/12 ">Worker/Visitor</div>
+        <div className=" w-2/12 ">Inducted</div>
+        <div className=" w-2/12">Daily Prestart</div>
 
       </div>
       <section className="p-3">
@@ -91,7 +91,7 @@ const Live = () => {
                   </div>
                   <div className="capitalize font-bold w-3/12 ">{e.company} </div>
                   <div className="capitalize w-2/12 ">{e.worker}</div>
-                  <div className=" pl-8 w-2/12">
+                  <div className="pl-3  w-2/12">
                     {
                       e.inducted_status == "active" ?
                         <>
@@ -107,7 +107,7 @@ const Live = () => {
                         </>
                     }
                   </div>
-                  <div className="pl-20  w-2/12">
+                  <div className="pl-6 w-2/12">
                     {
                       e.daily_prestart == "active" ?
                         <>
