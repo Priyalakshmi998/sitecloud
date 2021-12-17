@@ -361,6 +361,14 @@ template {
   margin-bottom: 0;
 }
 
+.login_page h2, .forget_page, .total_workers_no, .total_workers_present, .total_workers_visitors, .edit_basic_h1, .edit_card_h1 {
+  font-family: Riviera Nights Trial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 /** Validation error msg animation **/
 .text-focus-in {
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -393,7 +401,7 @@ template {
   }
 }
 
-.full_components .ant-layout {
+.full_components .ant-layout.ant-layout-has-sider {
   background: #ffff !important;
 }
 
@@ -402,7 +410,7 @@ template {
 }
 
 .sidebar_menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-  background-color: #1875f0;
+  background-color: #1875F0;
 }
 
 .sidebar_menu .ant-menu-inline .ant-menu-selected::after,
@@ -416,7 +424,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #ffff;
+  background: #fff;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -495,6 +503,12 @@ template {
   font-size: 1.8rem;
 }
 
+.container_login,
+.container_forgotpw {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .login_page {
   width: 100%;
 }
@@ -533,11 +547,6 @@ template {
   height: 24px;
   left: 785px;
   top: 323px;
-  font-family: Riviera Nights Trial;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   /* identical to box height */
   letter-spacing: 0.065em;
   /* primary text */
@@ -618,7 +627,6 @@ template {
   line-height: 17px;
   /* identical to box height */
   letter-spacing: 0.065em;
-  /* secondary text */
   color: #7A7A7A;
 }
 
@@ -626,6 +634,11 @@ template {
   width: 100%;
   height: 100vh;
   background-image: url("../../assets/image/svg/login_bg.svg");
+  background-size: 100%;
+}
+
+.formInput_container .ant-input-suffix {
+  display: none;
 }
 
 .login_btn_txt {
@@ -640,7 +653,7 @@ template {
   line-height: 17px;
   /* identical to box height */
   letter-spacing: 0.065em;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .login_input_text {
@@ -655,7 +668,7 @@ template {
   line-height: 17px;
   /* identical to box height */
   letter-spacing: 0.065em;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .resend_btn {
@@ -688,11 +701,6 @@ template {
   height: 24px;
   left: 785px;
   top: 323px;
-  font-family: Riviera Nights Trial;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   /* identical to box height */
   letter-spacing: 0.065em;
   /* primary text */
@@ -756,7 +764,7 @@ template {
   height: 193px;
   left: 272px;
   top: 84px;
-  background: #FFFFFF;
+  background: #fff;
   padding: 20px;
 }
 
@@ -797,11 +805,6 @@ template {
   height: 24px;
   left: 294px;
   top: 180px;
-  font-family: Riviera Nights Trial;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   /* identical to box height */
   letter-spacing: 0.065em;
   color: #33323D;
@@ -812,11 +815,6 @@ template {
   height: 24px;
   left: 422px;
   top: 180px;
-  font-family: Riviera Nights Trial;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   /* identical to box height */
   letter-spacing: 0.065em;
   /* bar one */
@@ -828,11 +826,6 @@ template {
   height: 24px;
   left: 510px;
   top: 180px;
-  font-family: Riviera Nights Trial;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   /* identical to box height */
   letter-spacing: 0.065em;
   /* bar two */
@@ -959,7 +952,6 @@ template {
   line-height: 16px;
   /* identical to box height */
   letter-spacing: 0.065em;
-  /* secondary text */
   color: #7A7A7A;
 }
 
@@ -968,7 +960,7 @@ template {
   height: 65px;
   left: 272px;
   top: 323px;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .trow_image {
@@ -1051,7 +1043,7 @@ template {
 .edit_basic_body {
   width: 754px;
   height: 609px;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .edit_basic_h1 {
@@ -1059,11 +1051,6 @@ template {
   height: 24px;
   left: 615px;
   top: 174px;
-  font-family: Riviera Nights Trial;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   /* identical to box height */
   letter-spacing: 0.065em;
   /* primary text */
@@ -1094,7 +1081,6 @@ template {
   line-height: 17px;
   /* identical to box height */
   letter-spacing: 0.065em;
-  /* secondary text */
   color: #7A7A7A;
 }
 
@@ -1152,23 +1138,18 @@ template {
   line-height: 17px;
   /* identical to box height */
   letter-spacing: 0.065em;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .edit_card_body {
   width: 754px;
   height: 581px;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .edit_card_h1 {
   width: 207px;
   height: 24px;
-  font-family: Riviera Nights Trial;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
   /* identical to box height */
   letter-spacing: 0.065em;
   /* primary text */
@@ -1178,13 +1159,13 @@ template {
 .change_password_body {
   width: 754px;
   height: 581px;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .setting_address_body {
   height: 160px;
   padding: 20px;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .setting_address_h1 {
@@ -1255,7 +1236,7 @@ template {
 .subricption_plan_body {
   height: 302px;
   padding: 25px 35px 25px 35px;
-  background: #FFFFFF;
+  background: #fff;
 }
 
 .subricption_plan_h1 {
@@ -1279,19 +1260,18 @@ template {
   font-size: 11px;
   line-height: 14px;
   letter-spacing: 0.065em;
-  /* secondary text */
   color: #7A7A7A;
 }
 
 .transction_history_body {
   height: 420px;
-  background: #FFFFFF;
+  background: #fff;
   padding: 25px 35px 25px 35px;
 }
 
 .need_help_body {
   height: 250px;
-  background: #FFFFFF;
+  background: #fff;
   padding: 25px 35px 25px 35px;
 }
 

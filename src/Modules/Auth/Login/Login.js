@@ -91,110 +91,112 @@ const Login = () => {
 
     return (
         <React.Fragment>
-            <Row>
-                {/* img container starts */}
-                <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
-                    <div className="login_pg_img">
+            <section className="container_login">
+                <Row>
+                    {/* img container starts */}
+                    <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
+                        <div className="login_pg_img">
 
-                    </div>
-                </Col>
-                {/* img container ends */}
-                {/* Login container starts */}
-                <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
-                    <section className="formInput_container">
-                        <div className="login_page">
-                            <div className="logo_img">
-                                {/* Logo */}
-                                <img src={Logo} alt="logo" />
-                            </div>
-                            <div className="pt-6" >
-                                <h1 >Site Cloud</h1></div>
-                            <div className="login_form">
-                                <h2>Login</h2>
-                                <form onSubmit={handleSubmit}>
-                                    {/* Email field starts */}
-                                    <div className="input_container">
-
-
-                                        <label className="form_label ">Email Address</label>
-                                        <div className="pt-1">
-                                            <Input
-                                                placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
-                                                name="userEmailInput"
-                                                className="login_input_text"
-                                                value={userEmailInput}
-                                                onChange={onChangeEmailInput}
-                                            /></div>
-                                        {/* required mail validation */}
-                                        {
-                                            emailRequired && (
-                                                <>
-                                                    <span className="validation_error text-focus-in">*Email ID is required</span>
-                                                </>
-                                            )
-                                        }
-
-                                        {/* Correct mail ID validation */}
-                                        {
-                                            checkEmailVaidation && (
-                                                <>
-                                                    <span className="validation_error text-focus-in">*Email is not valid</span>
-                                                </>
-                                            )
-                                        }
-                                    </div>
-
-                                    {/* Email field ends */}
-
-                                    {/* Password field starts */}
-                                    <div className="input_container">
-
-                                        <label className="form_label ">Password</label>
-
-                                        <div className="pt-2">
-                                            <Input.Password
-                                                placeholder="&nbsp;&nbsp;&nbsp;* * * * * *"
-                                                name="userpasswordInput"
-                                                value={userpasswordInput}
-                                                onChange={onChangePasswordInput}
-                                            />
-                                        </div>
-                                        {/* password validation */}
-                                        {passwordRequired
-                                            && (
-                                                <>
-                                                    <span className="validation_error text-focus-in">*Password is required</span>
-                                                </>
-                                            )}
-
-                                        {/* passord length validation */}
-                                        {
-                                            checkValidation === true && validPassword === false && (
-                                                <>
-                                                    <span className="validation_error text-focus-in">*Password must have minimum 6 characters</span>
-                                                </>
-                                            )}
-                                    </div>
-                                    {/* Password field ends */}
-
-                                    <div className="forgot_password">
-                                        <Button type="link" onClick={() => { navigate("/forgot_password") }} >
-                                            Forgot Password?
-                                        </Button>
-                                    </div>
-
-                                    <div className="login_btn">
-                                        <button type="submit" className="login_button_text" >
-                                            Login
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
                         </div>
-                    </section>
-                </Col>
-                {/* Login container ends */}
-            </Row>
+                    </Col>
+                    {/* img container ends */}
+                    {/* Login container starts */}
+                    <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
+                        <section className="formInput_container">
+                            <div className="login_page">
+                                <div className="logo_img">
+                                    {/* Logo */}
+                                    <img src={Logo} alt="logo" />
+                                </div>
+                                <div className="pt-6" >
+                                    <h1 >Site Cloud</h1></div>
+                                <div className="login_form">
+                                    <h2>Login</h2>
+                                    <form onSubmit={handleSubmit}>
+                                        {/* Email field starts */}
+                                        <div className="input_container">
+
+
+                                            <label className="form_label ">Email Address</label>
+                                            <div className="pt-1">
+                                                <Input
+                                                    placeholder="&nbsp;&nbsp;&nbsp;danielrich@gmail.com"
+                                                    name="userEmailInput"
+                                                    className="login_input_text"
+                                                    value={userEmailInput}
+                                                    onChange={onChangeEmailInput}
+                                                /></div>
+                                            {/* required mail validation */}
+                                            {
+                                                emailRequired && (
+                                                    <>
+                                                        <span className="validation_error text-focus-in">*Email ID is required</span>
+                                                    </>
+                                                )
+                                            }
+
+                                            {/* Correct mail ID validation */}
+                                            {
+                                                checkEmailVaidation && (
+                                                    <>
+                                                        <span className="validation_error text-focus-in">*Email is not valid</span>
+                                                    </>
+                                                )
+                                            }
+                                        </div>
+
+                                        {/* Email field ends */}
+
+                                        {/* Password field starts */}
+                                        <div className="input_container">
+
+                                            <label className="form_label ">Password</label>
+
+                                            <div className="pt-2">
+                                                <Input.Password
+                                                    placeholder="&nbsp;&nbsp;&nbsp;* * * * * *"
+                                                    name="userpasswordInput"
+                                                    value={userpasswordInput}
+                                                    onChange={onChangePasswordInput}
+                                                />
+                                            </div>
+                                            {/* password validation */}
+                                            {passwordRequired
+                                                && (
+                                                    <>
+                                                        <span className="validation_error text-focus-in">*Password is required</span>
+                                                    </>
+                                                )}
+
+                                            {/* passord length validation */}
+                                            {
+                                                checkValidation === true && validPassword === false && (
+                                                    <>
+                                                        <span className="validation_error text-focus-in">*Password must have minimum 6 characters</span>
+                                                    </>
+                                                )}
+                                        </div>
+                                        {/* Password field ends */}
+
+                                        <div className="forgot_password">
+                                            <Button type="link" onClick={() => { navigate("/forgot_password") }} >
+                                                Forgot Password?
+                                            </Button>
+                                        </div>
+
+                                        <div className="login_btn">
+                                            <button type="submit" className="login_button_text" >
+                                                Login
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </Col>
+                    {/* Login container ends */}
+                </Row>
+            </section>
         </React.Fragment>
     )
 }
