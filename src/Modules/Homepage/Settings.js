@@ -12,9 +12,9 @@ const Settings = () => {
         <React.Fragment>
             {/*Setting page starts*/}
             <div className="figma_font">
-                <section className="  p-3 ">
+                <section className="background_color  p-3 ">
                     {/*address block*/}
-                    <div className="setting_address_body mb-3  shadow-2xl">
+                    <div className="setting_address_body mb-3  shadow-lg">
                         <div className="flex">
                             <div className="w-1/12 p-2"><svg width="63" height="68" viewBox="0 0 63 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M31.2616 3.62182C31.9771 3.62164 32.6803 3.80116 33.2999 4.14233L57.4668 17.4462C58.0866 17.7874 58.601 18.2781 58.9588 18.869C59.3165 19.4599 59.505 20.1302 59.505 20.8125V47.4203C59.505 48.1025 59.3165 48.7728 58.9588 49.3638C58.601 49.9545 58.0866 50.4453 57.4668 50.7864L33.2999 64.0903C32.68 64.4314 31.9771 64.6111 31.2615 64.6111C30.5459 64.6111 29.8429 64.4314 29.2231 64.0903L5.05621 50.7864C4.4365 50.4453 3.92188 49.9545 3.56411 49.3638C3.20633 48.7728 3.01798 48.1025 3.018 47.4203V20.8125C3.01799 20.1302 3.20633 19.4599 3.56411 18.869C3.92191 18.2781 4.4365 17.7874 5.05621 17.4462L29.2231 4.14233C29.8429 3.80119 30.546 3.62167 31.2616 3.62182ZM31.2616 0.744202C30.0164 0.744665 28.7931 1.05721 27.7144 1.65051L3.54721 14.9544C2.47006 15.5496 1.57556 16.4038 0.953087 17.4318C0.33062 18.4598 0.00197781 19.6255 0 20.8125V47.4203C0.00204146 48.6074 0.330749 49.7733 0.95327 50.8011C1.57579 51.8292 2.47034 52.6833 3.54753 53.2785L27.7144 66.5824C28.793 67.1761 30.0163 67.4884 31.2616 67.4884C32.507 67.4884 33.7303 67.1761 34.8089 66.5824L58.9758 53.2785C60.0531 52.6836 60.9479 51.8292 61.5706 50.8014C62.1932 49.7733 62.522 48.6074 62.5242 47.4203V20.8125C62.5223 19.6255 62.1936 18.4598 61.5712 17.4318C60.9485 16.4038 60.054 15.5496 58.977 14.9544L34.8101 1.65051C33.7315 1.05725 32.5082 0.744708 31.2629 0.744202H31.2616Z" fill="url(#paint0_linear_317_2966)" />
@@ -61,7 +61,7 @@ const Settings = () => {
 
                     </div>
                     {/*subcription plan block*/}
-                    <div className="subricption_plan_body mb-3 shadow-2xl ">
+                    <div className="subricption_plan_body mb-3 shadow-lg ">
                         <p className="subricption_plan_h1">Subscription plan</p>
                         <p className="subricption_plan_label pt-2">Current Plan</p>
                         <div className="flex pt-4">
@@ -110,7 +110,7 @@ const Settings = () => {
                         <p className="setting_address_editor pt-6">+ &nbsp;&nbsp;Add New Payment Method</p>
                     </div>
                     {/*transction history block*/}
-                    <div className="transction_history_body mb-3 shadow-2xl">
+                    <div className="transction_history_body mb-3 shadow-lg">
                         <p className="subricption_plan_h1">Transaction History</p>
                         <div>
                             <p className="subricption_plan_label pt-3">12 Aug 2021</p>
@@ -154,7 +154,7 @@ const Settings = () => {
                         </div>
                     </div>
                     {/*Need help block*/}
-                    <div className="need_help_body mb-3 shadow-2xl ">
+                    <div className="need_help_body mb-3 shadow-lg ">
                         <p className="subricption_plan_h1">Need Help ?</p>
                         <div>
                             <p className="subricption_plan_label pt-3">Customer Support Number</p>

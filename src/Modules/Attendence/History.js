@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import "../sass/style.css";
+import Button from '@mui/material/Button';
 const History = () => {
   const [historyAttendenceData, setHistoryAttendenceData] = useState([]);
 
@@ -134,6 +135,11 @@ const History = () => {
             })}
           </div>
         </section>
+        <div className="flex -mt-32">
+              <div className="w-10/12"></div>
+              <div className="w-1/12 "><Button variant="text " > <span className="user_setting"></span></Button></div>
+              <div className="w-1/12"><Button variant="text " > <span className="user_setting"></span></Button></div>
+            </div>
       </div>
     </React.Fragment>
   )

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import "../sass/style.css";
+import Button from '@mui/material/Button';
 const Live = () => {
   const [liveAttendenceData, setLiveAttendenceData] = useState([]);
 
@@ -22,8 +23,8 @@ const Live = () => {
 
   return (
     <React.Fragment>
-       <div className="figma_font">
-       <section className="p-3 w-full">
+      <div className="figma_font">
+        <section className="p-3 w-full">
           <div className="live_att_address  shadow-2xl">
             <h1>
               Site Attendence: Melbourne F1 Track
@@ -58,85 +59,92 @@ const Live = () => {
           </div>
 
         </section>
-      <div className="flex pr-5  text-gray-700">
-        <div className="w-3/12 "></div>
-        <div className=" pl-10 w-3/12">Company Name</div>
-        <div className="pl-3 w-2/12 ">Worker/Visitor</div>
-        <div className=" w-2/12 ">Inducted</div>
-        <div className=" w-2/12">Daily Prestart</div>
+        <div className="flex pr-5  text-gray-700">
+          <div className="w-3/12 "></div>
+          <div className=" pl-10 w-3/12">Company Name</div>
+          <div className="pl-3 w-2/12 ">Worker/Visitor</div>
+          <div className=" w-2/12 ">Inducted</div>
+          <div className=" w-2/12">Daily Prestart</div>
 
-      </div>
-      <section className="p-3">
-        <div className="bg-white  text-black  p-5 shadow-2xl  ">
-          {liveAttendenceData.map((e) => {
+        </div>
+        <section className="p-3">
+          <div className="bg-white  text-black  p-5 shadow-2xl  ">
+            {liveAttendenceData.map((e) => {
 
 
-            return (
-              <>
+              return (
+                <>
 
-                <div key={e.id} className="flex pt-4 pb-2 pl-6">
-                  <div className="w-3/12 ">
-                    <div className="flex">
-                      <div className="w-1/6">
-                        <img
-                          src={e.image}
-                          alt="Image"
-                          className="rounded-full h-10 w-10 -mt-1"
-                        />
-                      </div>
-                      <div className="pl-3 w-5/6 font-bold text-blue-600 capitalize">
-                        {e.name}{" "}
+                  <div key={e.id} className="flex pt-4 pb-2 pl-6">
+                    <div className="w-3/12 ">
+                      <div className="flex">
+                        <div className="w-1/6">
+                          <img
+                            src={e.image}
+                            alt="Image"
+                            className="rounded-full h-10 w-10 -mt-1"
+                          />
+                        </div>
+                        <div className="pl-3 w-5/6 font-bold text-blue-600 capitalize">
+                          {e.name}{" "}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="capitalize font-bold w-3/12 ">{e.company} </div>
-                  <div className="capitalize w-2/12 ">{e.worker}</div>
-                  <div className="pl-3  w-2/12">
-                    {
-                      e.inducted_status == "active" ?
-                        <>
-                          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="5.5" cy="5.5" r="5.5" fill="#70CF73" />
-                          </svg>
-                        </>
-                        :
-                        <>
-                         <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="5.5" cy="5.5" r="5.5" fill="#EF7474"/>
-</svg>
-                        </>
-                    }
-                  </div>
-                  <div className="pl-6 w-2/12">
-                    {
-                      e.daily_prestart == "active" ?
-                        <>
-                          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="5.5" cy="5.5" r="5.5" fill="#70CF73" />
-                          </svg>
-                        </>
-                        :
-                        <>
-                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="5.5" cy="5.5" r="5.5" fill="#EF7474"/>
-</svg>
-                        </>
-                    }
-                  </div>
+                    <div className="capitalize font-bold w-3/12 ">{e.company} </div>
+                    <div className="capitalize w-2/12 ">{e.worker}</div>
+                    <div className="pl-3  w-2/12">
+                      {
+                        e.inducted_status == "active" ?
+                          <>
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="5.5" cy="5.5" r="5.5" fill="#70CF73" />
+                            </svg>
+                          </>
+                          :
+                          <>
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="5.5" cy="5.5" r="5.5" fill="#EF7474" />
+                            </svg>
+                          </>
+                      }
+                    </div>
+                    <div className="pl-6 w-2/12">
+                      {
+                        e.daily_prestart == "active" ?
+                          <>
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="5.5" cy="5.5" r="5.5" fill="#70CF73" />
+                            </svg>
+                          </>
+                          :
+                          <>
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="5.5" cy="5.5" r="5.5" fill="#EF7474" />
+                            </svg>
+                          </>
+                      }
+                    </div>
 
-                </div>
-                <hr></hr>
-              </>
-            );
-          })}
-        </div>
-      </section>
+                  </div>
+                  <hr></hr>
+                </>
+              );
+            })}
+            
+          </div>
+        </section>
+        <div className="flex -mt-32">
+              <div className="w-10/12"></div>
+              <div className="w-1/12 "><Button variant="text " > <span className="user_setting"></span></Button></div>
+              <div className="w-1/12"><Button variant="text " > <span className="user_setting"></span></Button></div>
+            </div>
+           
       </div>
     </React.Fragment>
   )
 }
 
-export default Live; 
+export default Live;
 
 {/*const Live = () => {
   const [liveAttendenceData, setLiveAttendenceData] = useState([]);
