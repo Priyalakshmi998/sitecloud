@@ -14,51 +14,53 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PageNotFound from "./Modules/PageNotFound/ErrorPage"
 import store from "./Store/Store";
 import "antd/dist/antd.css";
-import "./Modules/sass/style.css";
-import './App.css';
 import Sitesetup from "./Modules/Homepage/Sitesetup";
 import Editbasic from "./Modules/Attendence/Editbasic";
+import './App.css';
+import "./Modules/sass/style.css";
 
 const App = () => {
 
   return (
- <React.Fragment>
-      <Provider store={store}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/forgot_password" element={<ForgotPassWord />} />
-            <Route path="/home" element={<Home/>} />
-            <Route path="/site_setup" element={<Sitesetup/>} />
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/managesite" element={<Map />} />
-            </Route>
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/daily_attendence" element={<DailyAttenance />} />
-            </Route>
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/live_attendence" element={<Live />} />
-            </Route>
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/attendence_history" element={<History />} />
-            </Route>
-             <Route element={<ProtectedRoutes />}>
-              <Route path="/manual_signin" element={<Signin />} />
-            </Route>
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/edit_basic_information" element={<Editbasic />} />
-            </Route>
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/settings" element={<Settings />} />
-            </Route>
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </Router>
-      </Provider>
+    <React.Fragment>
+      <section className="full_components">
+        <Provider store={store}>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/forgot_password" element={<ForgotPassWord />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/site_setup" element={<Sitesetup />} />
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/managesite" element={<Map />} />
+              </Route>
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/daily_attendence" element={<DailyAttenance />} />
+              </Route>
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/live_attendence" element={<Live />} />
+              </Route>
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/attendence_history" element={<History />} />
+              </Route>
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/manual_signin" element={<Signin />} />
+              </Route>
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/edit_basic_information" element={<Editbasic />} />
+              </Route>
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/settings" element={<Settings />} />
+              </Route>
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </Router>
+        </Provider>
+      </section>
     </React.Fragment>
 
-    
+
 
   );
 }

@@ -16,16 +16,16 @@
 @import './buttons';
 
 
-.full_components .ant-layout {
+.full_components .ant-layout.ant-layout-has-sider {
     background: #ffff !important;
 }
 
 .sidebar_menu .ant-menu-item-selected {
-    color: #fff;
+    color: map-get($colors, "white");
 }
 
 .sidebar_menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: #1875f0;
+    background-color: $primary-color;
 }
 
 .sidebar_menu .ant-menu-inline .ant-menu-selected::after,
@@ -36,7 +36,7 @@
 /*Desktop View*/
 .header {
     display: flex;
-    background: #ffff;
+    background: map-get($colors, "white");
     justify-content: space-between;
     height: 70px;
 }
@@ -97,11 +97,11 @@
 
 .nav_bar .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
     font-weight: 600;
-    color: #000;
+    color: map-get($colors, "black");
 }
 
 .nav_bar .css-hip9hq-MuiPaper-root-MuiAppBar-root {
-    background-color: #fff;
+    background-color: map-get($colors, "white");
     border-bottom: 5px solid #e5e5e5;
 }
 
@@ -114,6 +114,11 @@
     font-size: 1.8rem;
 }
 
+.container_login,
+.container_forgotpw {
+    overflow: hidden;
+    height: 100vh;
+}
 
 .login_page {
     width: 100%;
@@ -163,18 +168,12 @@
         left: 785px;
         top: 323px;
 
-        font-family: Riviera Nights Trial;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 24px;
+        @extend %font_basic_style;
         /* identical to box height */
         letter-spacing: 0.065em;
 
         /* primary text */
         color: #33323D;
-
-
     }
 }
 
@@ -199,7 +198,7 @@
                 color: $primary-color;
 
                 &:hover {
-                    color: #000;
+                    color: map-get($colors, "black");
                 }
             }
 
@@ -261,22 +260,18 @@
     line-height: 17px;
     /* identical to box height */
     letter-spacing: 0.065em;
-
-    /* secondary text */
-    color: #7A7A7A;
-
-
+    color: $secondary-text;
 }
-
-// .login_pg_img {
-//     height: 100vh;
-// }
 
 .login_pg_img {
     width: 100%;
     height: 100vh;
     background-image: url("../../assets/image/svg/login_bg.svg");
+    background-size: 100%;
+}
 
+.formInput_container .ant-input-suffix {
+    display: none;
 }
 
 .login_btn_txt {
@@ -294,7 +289,7 @@
 
     letter-spacing: 0.065em;
 
-    color: #FFFFFF;
+    color: map-get($colors, "white");
 }
 
 .login_input_text {
@@ -312,7 +307,7 @@
 
     letter-spacing: 0.065em;
 
-    color: #FFFFFF;
+    color: map-get($colors, "white");
 }
 
 .resend_btn {
@@ -322,7 +317,7 @@
 
         /* primary color */
 
-        background: #1875F0;
+        background: $primary-color;
         border: 0;
         font-size: 13px;
         font-weight: 600;
@@ -347,11 +342,7 @@
     height: 24px;
     left: 785px;
     top: 323px;
-    font-family: Riviera Nights Trial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
+    @extend %font_basic_style;
     /* identical to box height */
 
     letter-spacing: 0.065em;
@@ -425,11 +416,11 @@
 }
 
 .live_att_address {
-   
+
     height: 193px;
     left: 272px;
     top: 84px;
-    background: #FFFFFF;
+    background: map-get($colors, "white");
     padding: 20px;
 }
 
@@ -479,11 +470,7 @@
     left: 294px;
     top: 180px;
 
-    font-family: Riviera Nights Trial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
+    @extend %font_basic_style;
     /* identical to box height */
 
     letter-spacing: 0.065em;
@@ -497,11 +484,7 @@
     left: 422px;
     top: 180px;
 
-    font-family: Riviera Nights Trial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
+    @extend %font_basic_style;
     /* identical to box height */
 
     letter-spacing: 0.065em;
@@ -517,11 +500,7 @@
     left: 510px;
     top: 180px;
 
-    font-family: Riviera Nights Trial;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
+    @extend %font_basic_style;
     /* identical to box height */
 
     letter-spacing: 0.065em;
@@ -548,7 +527,7 @@
 
     /* secondary text */
 
-    color: #7A7A7A;
+    color: $secondary-text;
 }
 
 .workers {
@@ -621,7 +600,7 @@
 
     /* secondary text */
 
-    color: #7A7A7A;
+    color: $secondary-text;
 
 
 }
@@ -644,7 +623,7 @@
 
     /* secondary text */
 
-    color: #7A7A7A;
+    color: $secondary-text;
 
 }
 
@@ -663,10 +642,8 @@
     /* identical to box height */
 
     letter-spacing: 0.065em;
-
     /* secondary text */
-
-    color: #7A7A7A;
+    color: $secondary-text;
 }
 
 .thead_present {
@@ -682,28 +659,19 @@
     font-size: 12px;
     line-height: 16px;
     /* identical to box height */
-
     letter-spacing: 0.065em;
-
-    /* secondary text */
-
-    color: #7A7A7A;
-
+    color: $secondary-text;
 }
 
 .live_att_trow {
-
     width: 1156px;
     height: 65px;
     left: 272px;
     top: 323px;
-
-    background: #FFFFFF;
+    background: map-get($colors, "white");
 }
 
 .trow_image {
-
-
     width: 40px;
     height: 40px;
     left: 300px;
@@ -712,7 +680,6 @@
 }
 
 .trow_name {
-
     width: 81px;
     height: 16px;
     left: 367px;
@@ -728,10 +695,7 @@
     letter-spacing: 0.065em;
 
     /* primary color */
-
-    color: #1875F0;
-
-
+    color: $primary-color;
 }
 
 .trow_cmy_name {
@@ -747,11 +711,8 @@
     font-size: 12px;
     line-height: 16px;
     /* identical to box height */
-
     letter-spacing: 0.065em;
-
     /* primary text */
-
     color: #33323D;
 }
 
@@ -794,342 +755,332 @@
 .txt_center {
     text-align: center;
     align-items: center;
-   
 }
-.edit_basic_body{
-    
-width: 754px;
-height: 609px;
 
-
-background: #FFFFFF;
+.edit_basic_body {
+    width: 754px;
+    height: 609px;
+    background: map-get($colors, "white");
 }
-.edit_basic_h1{
-    
-width: 210px;
-height: 24px;
-left: 615px;
-top: 174px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height */
+.edit_basic_h1 {
 
-letter-spacing: 0.065em;
+    width: 210px;
+    height: 24px;
+    left: 615px;
+    top: 174px;
 
-/* primary text */
+    @extend %font_basic_style;
+    /* identical to box height */
 
-color: #33323D;
+    letter-spacing: 0.065em;
+
+    /* primary text */
+
+    color: #33323D;
 }
-.edit_basic_hlogo{
+
+.edit_basic_hlogo {
     width: 154px;
     height: 17px;
-   
-    
+
+
     font-family: Riviera Nights Trial;
     font-style: normal;
     font-weight: 900;
     font-size: 13px;
     line-height: 17px;
     /* identical to box height */
-    
+
     letter-spacing: 0.065em;
-    
+
     /* primary color */
-    
-    color: #1875F0;
+
+    color: $primary-color;
 }
-.edit_basic_label1{
+
+.edit_basic_label1 {
     width: 200px;
-height: 17px;
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
-
-letter-spacing: 0.065em;
-
-/* secondary text */
-
-color: #7A7A7A;
+    height: 17px;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+    letter-spacing: 0.065em;
+    color: $secondary-text;
 
 }
-.edit_basic_border{
+
+.edit_basic_border {
     width: 590px;
-height: 60px;
-border: 1px solid #DBDBDB;
-box-sizing: border-box;
-
+    height: 60px;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
 }
-.edit_basic_input{
+
+.edit_basic_input {
     width: 120px;
-height: 18px;
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 18px;
-letter-spacing: 0.065em;
-padding-left: 10px;
+    height: 18px;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.065em;
+    padding-left: 10px;
 
-/* primary text */
+    /* primary text */
 
-color: #33323D;
+    color: #33323D;
 
 
 }
-.edit_basic_cancel_bt{
+
+.edit_basic_cancel_bt {
     width: 46px;
-height: 17px;
+    height: 17px;
 
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
-text-align: center;
-letter-spacing: 0.065em;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.065em;
 
-/* warning red */
+    /* warning red */
 
-color: #EF4F4F;
+    color: #EF4F4F;
 }
-.edit_basic_save_bt{
+
+.edit_basic_save_bt {
     width: 146px;
-height: 45px;
+    height: 45px;
 
-/* primary color */
+    /* primary color */
 
-background: #1875F0;
+    background: $primary-color;
 }
-.edit_basic_save-text{
+
+.edit_basic_save-text {
     width: 32px;
-height: 17px;
+    height: 17px;
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
 
-/* identical to box height */
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-color: #FFFFFF;
+    color: map-get($colors, "white");
 
 }
-.edit_card_body{
+
+.edit_card_body {
     width: 754px;
-height: 581px;
-background: #FFFFFF;
+    height: 581px;
+    background: map-get($colors, "white");
 }
-.edit_card_h1{
+
+.edit_card_h1 {
     width: 207px;
-height: 24px;
-
-
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height */
-
-letter-spacing: 0.065em;
-
-/* primary text */
-
-color: #33323D;
-
+    height: 24px;
+    @extend %font_basic_style;
+    /* identical to box height */
+    letter-spacing: 0.065em;
+    /* primary text */
+    color: #33323D;
 }
-.change_password_body{
+
+.change_password_body {
     width: 754px;
-height: 581px;
-
-background: #FFFFFF;
-
-
+    height: 581px;
+    background: map-get($colors, "white");
 }
-.setting_address_body{
+
+.setting_address_body {
     height: 160px;
     padding: 20px;
-    background: #FFFFFF;
+    background: map-get($colors, "white");
 }
-.setting_address_h1{
-   
-height: 29px;
 
+.setting_address_h1 {
+    height: 29px;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+    /* identical to box height */
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 22px;
-line-height: 29px;
-/* identical to box height */
+    letter-spacing: 0.065em;
 
-letter-spacing: 0.065em;
+    /* primary text */
 
-/* primary text */
-
-color: #33323D;
+    color: #33323D;
 }
-.setting_address_h2{
-   
-height: 17px;
 
+.setting_address_h2 {
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
-
-letter-spacing: 0.065em;
-
-/* primary text */
-
-color: #33323D;
-}
-.setting_address_h3{
-
-height: 17px;
-
-
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
-
-letter-spacing: 0.065em;
-
-/* primary text */
-
-color: #33323D;
-}
-.setting_address_h4{
-    height: 17px;
-
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
-
-letter-spacing: 0.065em;
-
-/* primary text */
-
-color: #33323D;
-}
-.setting_address_editor{
     height: 17px;
 
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: 900;
-font-size: 13px;
-line-height: 17px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary color */
+    /* primary text */
 
-color: #1875F0;
+    color: #33323D;
+}
+
+.setting_address_h3 {
+
+    height: 17px;
+
+
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    /* primary text */
+
+    color: #33323D;
+}
+
+.setting_address_h4 {
+    height: 17px;
+
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    /* primary text */
+
+    color: #33323D;
+}
+
+.setting_address_editor {
+    height: 17px;
+
+
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    /* primary color */
+
+    color: $primary-color;
 
 }
-.subricption_plan_body{
+
+.subricption_plan_body {
     height: 302px;
     padding: 25px 35px 25px 35px;
-    background: #FFFFFF;
-
+    background: map-get($colors, "white");
 }
-.subricption_plan_h1{
+
+.subricption_plan_h1 {
     height: 29px;
 
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 22px;
-line-height: 29px;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary text */
+    /* primary text */
 
-color: #33323D;
+    color: #33323D;
 
 }
-.subricption_plan_label{
+
+.subricption_plan_label {
     height: 14px;
 
 
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: normal;
-font-size: 11px;
-line-height: 14px;
-letter-spacing: 0.065em;
-
-/* secondary text */
-
-color: #7A7A7A;
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.065em;
+    color: $secondary-text;
 }
-.transction_history_body{
+
+.transction_history_body {
     height: 420px;
-    background: #FFFFFF;
+    background: map-get($colors, "white");
     padding: 25px 35px 25px 35px;
 
 }
-.need_help_body{
+
+.need_help_body {
     height: 250px;
-    background: #FFFFFF;
+    background: map-get($colors, "white");
     padding: 25px 35px 25px 35px;
 }
-.setting_btn{
+
+.setting_btn {
     width: 164px;
-height: 45px;
-
-
-/* primary color */
-
-border: 1.5px solid #1875F0;
-box-sizing: border-box;
+    height: 45px;
+    /* primary color */
+    border: 1.5px solid $primary-color;
+    box-sizing: border-box;
 }
-.setting_btn_text{
+
+.setting_btn_text {
     height: 17px;
-font-family: Riviera Nights Trial;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 17px;
-text-align: center !important ;
-/* identical to box height */
+    font-family: Riviera Nights Trial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center !important;
+    /* identical to box height */
 
-letter-spacing: 0.065em;
+    letter-spacing: 0.065em;
 
-/* primary color */
+    /* primary color */
 
-color: #1875F0;
+    color: $primary-color;
 }
-.background_color{
 
-left: 0px;
-top: 0px;
-background: #FAFAFA;
+.background_color {
+
+    left: 0px;
+    top: 0px;
+    background: #FAFAFA;
 }
