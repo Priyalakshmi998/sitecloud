@@ -23,8 +23,8 @@ class Signin extends Component {
 
     return (
       <>
-       <div className="figma_font">
-       <section className="p-3">
+       <div className="figma_font background_color">
+       <section className="p-3 background_color">
           <div className="live_att_address  shadow-2xl ">
             <h1>
               Site Attendence: Melbourne F1 Track
@@ -59,7 +59,7 @@ class Signin extends Component {
           </div>
           
         </section>
-        <section className="p-3">
+        <section className="p-3 background_color">
           <div className="bg-white  text-black  p-5 shadow-2xl">
             <div className="h-80"></div>
             <div className="  flex flex-col justify-center items-center ">

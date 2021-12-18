@@ -23,7 +23,7 @@ const Daily = () => {
 
   return (
     <>
-      <div className="figma_font">
+      <div className="figma_font background_color">
         <section className="p-3 ">
           <div className="live_att_address  shadow-2xl">
             <h1>
