@@ -48,13 +48,13 @@ function SideNav() {
                 >
                     <Menu
                         mode="inline"
-                        defaultSelectedKeys={['2']}
+                        // defaultSelectedKeys={['1']}
                         // defaultOpenKeys={['sub1']}
                         style={{ height: '100%', borderRight: 0 }}
                     />
                     <Menu
                         mode="inline"
-                        defaultSelectedKeys={['2']}
+                        // defaultSelectedKeys={['1']}
                         // defaultOpenKeys={['sub1']}
                         style={{ height: '100%', borderRight: 0 }}
                     >
