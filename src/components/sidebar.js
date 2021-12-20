@@ -22,15 +22,12 @@ const useStyles = makeStyles({
         height: 80,
         color: 'white'
     },
-    selected: {
-        backgroundColor: '#0066ffef',
-    }
 });
 
 export const SideBar = ({ getSelectedItem, sites }) => {
     const classes = useStyles();
     const history = useNavigate();
-    // const sideBarEl = useRef(null);
+    const sideBarEl = useRef(null);
 
     const [selectedIndex, setSelected] = useState(null);
 
@@ -44,14 +41,12 @@ export const SideBar = ({ getSelectedItem, sites }) => {
     }
 
     
-    // useEffect(() => {
-    //     console.log('width', sideBarEl.current ? sideBarEl.current.offsetWidth : 0);
-    // }, [])
+    useEffect(() => {
+        console.log('width', sideBarEl.current ? sideBarEl.current.offsetWidth : 0);
+    }, [])
+
     return (
-        <div
-            // ref = {sideBarEl} 
-            className={classes.root}
-        >
+        <div ref = {sideBarEl} className={classes.root}>
             <List className="list" component="nav">
                 <ListItem
                     className={classes.siteBar}
@@ -61,11 +56,10 @@ export const SideBar = ({ getSelectedItem, sites }) => {
                 </ListItem>
                 {(sites.length > 0) && sites.map((item, i) => {
                         return (
-                            <React.Fragment key={i}>
-                                {/* {console.log("item " + i + '====' + isSelected(i) ? 'selected' : null)} */}
+                            <React.Fragment key={item.sitemappingId}>
                                 <ListItem
-                                    button={true} 
-                                    className={isSelected(i) ? classes.selected : null} 
+                                    button 
+                                    className={isSelected(i) ? 'selected' : null} 
                                     onClick={() => onSelected(i, item)}
                                     onDoubleClick={() => history(`/showsite/${item.sitemappingId}`)}
                                 >

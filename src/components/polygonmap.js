@@ -74,7 +74,6 @@ const PolygonMap = forwardRef((props, ref) => {
           props.setExistPolygon(true);
           props.setEditingStatus(BOUNDARY_CREATE);
       }
-      props.endDrawPolygon();
   };
 
   const onDrawUpdate = ({ features }) => {
@@ -180,11 +179,8 @@ const PolygonMap = forwardRef((props, ref) => {
 
   const deleteSelectedPolyon = () => {
     let selectedIDs = drawControl.current.draw.getSelectedIds();
-    if(selectedIDs.length === 0)
-      return false;
     drawControl.current.draw.delete(selectedIDs);
     setPolygon({});
-    return true;
   }
 
   const deleteMarkup = () => {
